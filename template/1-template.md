@@ -53,6 +53,16 @@ Now as the ***root*** user:
 make install
 ```
 
+## Command Explanations
+  `--disable-static`: This parameter disables building unnecessary static
+  libraries. Note that this explantion is here for the sake of being an
+  example, but in real practice is unnecessary. This should be handled case by
+  case basis, to decide if an instruction, flag, or parameter should be
+  explained.
+
+  `make install`: This command installs the package. Again, this explanation is
+  not necessary and here for the sake of an example.
+
 ## Configuring Package
 Add the following `/etc/package.conf` file:
 ```Bash
