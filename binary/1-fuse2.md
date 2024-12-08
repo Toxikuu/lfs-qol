@@ -6,17 +6,17 @@ rely on this technology. You may extract AppImages as you wish which would
 bypass this requirement, but other people opt to just install Fuse2 and run the
 AppImages directly.
 
-# Package Information
+## Package Information
 - Download (HTTP): https://github.com/libfuse/libfuse/releases/download/fuse-2.9.9/fuse-2.9.9.tar.gz
 - Download md5sum: 8000410aadc9231fd48495f7642f3312
 - Download Size: 1.8M
 - Build Size: 17M
 - Build Time: 0.1 SBU
 
-# Additional Download
+## Additional Download
 - Required patch: https://gitlab.archlinux.org/archlinux/packaging/packages/fuse2/-/raw/main/conditionally-define-closefrom.patch
 
-# Kernel Configuration
+## Kernel Configuration
 Enable the following options in the kernel and recompile if necessary:
 ```
 File systems --->
@@ -31,7 +31,7 @@ File systems --->
   <*/M>   Character device in Userspace support                           [CUSE]
 ```
 
-# Installation of Fuse2
+## Installation of Fuse2
 First apply a patch to fix compatibility with glibc-2.34 and up and regenerate
 the `configure` script:
 ```Bash
@@ -58,7 +58,7 @@ install -v -m644    doc/{how-fuse-works,kernel.txt} \
                     /usr/share/doc/fuse-2.9.9
 ```
 
-# Configuring Fuse2
+## Configuring Fuse2
 Some options regarding mount policy can be set in the file `/etc/fuse.conf`.
 To install the file run the following command as the ***root*** user:
 ```Bash
