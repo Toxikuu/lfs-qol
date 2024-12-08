@@ -9,8 +9,8 @@ install the Flatpak version instead.
 - Download (HTTP): https://github.com/flatpak/flatpak/releases/download/1.14.10/flatpak-1.14.10.tar.xz
 - Download md5sum: 4eb3f96ab7a73b01b408e5bb15630106
 - Download Size: 1.6M
-- Build Size: 
-- Build Time: 
+- Build Size: 106M
+- Build Time: 0.5 SBU
 
 ## Package Dependencies
 **NOTE: the following packages may not be in their right section.**
@@ -23,8 +23,11 @@ install the Flatpak version instead.
 - [json-glib](https://linuxfromscratch.org/blfs/view/svn/general/json-glib.html)
 - [libseccomp](https://linuxfromscratch.org/blfs/view/svn/general/libseccomp.html)
 - [OSTree](./2-ostree.md)
+- [p11-kit](https://linuxfromscratch.org/blfs/view/svn/postlfs/p11-kit.html)
+- [pyparsing](https://linuxfromscratch.org/blfs/view/svn/general/python-modules.html#pyparsing)
 ### Recommended
-- [AppStream](https://linuxfromscratch.org/blfs/view/svn/general/appstream.html)
+- [appstream-glib](https://linuxfromscratch.org/blfs/view/svn/general/appstream-glib.html)
+- [Avahi](https://linuxfromscratch.org/blfs/view/svn/basicnet/avahi.html)
 - [Bubblewrap](https://linuxfromscratch.org/blfs/view/svn/general/bubblewrap.html)
 - [cURL](https://linuxfromscratch.org/blfs/view/svn/basicnet/curl.html)
 - [DConf](https://linuxfromscratch.org/blfs/view/svn/gnome/dconf.html)
@@ -46,7 +49,9 @@ install the Flatpak version instead.
 ## Installation of Flatpak
 Install Flatpak by following the commands below:
 ```Bash
-./configure --prefix=/usr &&
+./configure --prefix=/usr     \
+            --sysconfdir=/etc \
+            --localstatedir=/var &&
 make
 ```
 

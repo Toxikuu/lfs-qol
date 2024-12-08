@@ -6,8 +6,8 @@ The OSTree package for container deployment and the like. It is required by
 - Download (HTTP): https://github.com/ostreedev/ostree/releases/download/v2024.9/libostree-2024.9.tar.xz
 - Download md5sum: b37704388816de5e52f5497bfb16c5b7
 - Download Size: 2.1M
-- Build Size: 
-- Build Time: 
+- Build Size: 43M
+- Build Time: 0.4 SBU
 
 ## Package Dependencies
 **NOTE: These dependencies may not be in the right category.**
