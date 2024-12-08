@@ -12,14 +12,15 @@ The OSTree package for container deployment and the like. It is required by
 ## Package Dependencies
 **NOTE: These dependencies may not be in the right category.**
 ### Required
-- [Fuse2](./1-fuse2.md) or [Fuse3](https://linuxfromscratch.org/blfs/view/svn/postlfs/fuse.html)
-- [Glib2](https://linuxfromscratch.org/blfs/view/svn/general/git.html) (with GObjectIntrospection)
+  [Fuse2](./1-fuse2.md) or [Fuse3](https://linuxfromscratch.org/blfs/view/svn/postlfs/fuse.html) and
+  [Glib2](https://linuxfromscratch.org/blfs/view/svn/general/git.html) (with GObjectIntrospection)
+
 ### Recommended
-- [elogind](https://linuxfromscratch.org/blfs/view/svn/general/elogind.html)
-- [GTK-Doc](https://linuxfromscratch.org/blfs/view/svn/general/gtk-doc.html)
-- [libsoup](https://linuxfromscratch.org/blfs/view/svn/basicnet/libsoup.html)
-- [libsoup3](https://linuxfromscratch.org/blfs/view/svn/basicnet/libsoup3.html)
-- [libxslt](https://linuxfromscratch.org/blfs/view/svn/general/libxslt.html)
+  [elogind](https://linuxfromscratch.org/blfs/view/svn/general/elogind.html),
+  [GTK-Doc](https://linuxfromscratch.org/blfs/view/svn/general/gtk-doc.html),
+  [libsoup](https://linuxfromscratch.org/blfs/view/svn/basicnet/libsoup.html),
+  [libsoup3](https://linuxfromscratch.org/blfs/view/svn/basicnet/libsoup3.html), and
+  [libxslt](https://linuxfromscratch.org/blfs/view/svn/general/libxslt.html)
 
 ## Installation of OSTree
 Install OSTree by following the commands below:

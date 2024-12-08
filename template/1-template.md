@@ -15,12 +15,15 @@ stay "Package"
 
 ## Package Dependencies
 ### Required
-- [git](https://linuxfromscratch.org/blfs/view/svn/general/git.html) (for tests)
-- [Fuse2](../binary/1-fuse2.md) (For userspace stuff)
+  [Fuse2](../binary/1-fuse2.md) (For userspace stuff),
+  [git](https://linuxfromscratch.org/blfs/view/svn/general/git.html) (for tests), and
+  [NSS](https://linuxfromscratch.org/blfs/view/svn/postlfs/nss.html)
+
 ### Recommended
-- [Lua](https://linuxfromscratch.org/blfs/view/svn/general/lua.html) (for running lua scripts)
+  [Lua](https://linuxfromscratch.org/blfs/view/svn/general/lua.html) (for running lua scripts)
+
 ### Optional
-- [LLVM](https://linuxfromscratch.org/blfs/view/svn/general/llvm.html) (with Clang)
+  [LLVM](https://linuxfromscratch.org/blfs/view/svn/general/llvm.html) (with Clang)
 
 ## Kernel Configuration
 Enable the following options in the kernel and recompile if necessary:
