@@ -13,6 +13,15 @@ stay "Package"
 ## Additional Download
 - Required patch: https://test.com/tarball-1.0.0-fix-behavior.patch
 
+## Package Dependencies
+### Required
+- [git](https://linuxfromscratch.org/blfs/view/svn/general/git.html) (for tests)
+- [Fuse2](../binary/1-fuse2.md) (For userspace stuff)
+### Recommended
+- [Lua](https://linuxfromscratch.org/blfs/view/svn/general/lua.html) (for running lua scripts)
+### Optional
+- [LLVM](https://linuxfromscratch.org/blfs/view/svn/general/llvm.html) (with Clang)
+
 ## Kernel Configuration
 Enable the following options in the kernel and recompile if necessary:
 ```
