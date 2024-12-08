@@ -23,6 +23,7 @@ install the Flatpak version instead.
   [gpgme](https://linuxfromscratch.org/blfs/view/svn/postlfs/gpgme.html),
   [json-glib](https://linuxfromscratch.org/blfs/view/svn/general/json-glib.html),
   [libseccomp](https://linuxfromscratch.org/blfs/view/svn/general/libseccomp.html),
+  [libsoup3](https://linuxfromscratch.org/blfs/view/svn/basicnet/libsoup3.html),
   [OSTree](./2-ostree.md),
   [p11-kit](https://linuxfromscratch.org/blfs/view/svn/postlfs/p11-kit.html), and
   [pyparsing](https://linuxfromscratch.org/blfs/view/svn/general/python-modules.html#pyparsing)
@@ -50,6 +51,9 @@ install the Flatpak version instead.
   [Valgrind](https://linuxfromscratch.org/blfs/view/svn/general/valgrind.html)
 
 ## Installation of Flatpak
+
+[//]: # (A Flatpak user seems to be unnecessary as Arch does not employ one.)
+
 Install Flatpak by following the commands below:
 ```Bash
 ./configure --prefix=/usr     \
