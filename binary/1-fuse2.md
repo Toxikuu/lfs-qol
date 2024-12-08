@@ -8,10 +8,10 @@ AppImages directly.
 
 # Package Information
 - Download (HTTP): https://github.com/libfuse/libfuse/releases/download/fuse-2.9.9/fuse-2.9.9.tar.gz
-- Download md5sum:
-- Download Size:
-- Build Size:
-- Build Time:
+- Download md5sum: 8000410aadc9231fd48495f7642f3312
+- Download Size: 1.8M
+- Build Size: 17M
+- Build Time: 0.1 SBU
 
 # Additional Download
 - Required patch: https://gitlab.archlinux.org/archlinux/packaging/packages/fuse2/-/raw/main/conditionally-define-closefrom.patch
@@ -32,9 +32,11 @@ File systems --->
 ```
 
 # Installation of Fuse2
-First apply a patch to fix compatibility with glibc-2.34 and up:
+First apply a patch to fix compatibility with glibc-2.34 and up and regenerate
+the `configure` script:
 ```Bash
-patch -Np1 -i conditionally-define-closefrom.patch
+patch -Np1 -i ../conditionally-define-closefrom.patch &&
+autoreconf -i
 ```
 
 Now install Fuse2 by following the commands below:
@@ -49,8 +51,6 @@ Now as the ***root*** user:
 ```Bash
 make install &&
 
-mv -v   /usr/lib/libfuse.so.* /lib                     &&
-ln -sfv ../../lib/libfuse.so.2.9.9 /usr/lib/libfuse.so &&
 rm -rf  /tmp/init.d &&
 
 install -v -m755 -d /usr/share/doc/fuse-2.9.9 &&
@@ -59,5 +59,18 @@ install -v -m644    doc/{how-fuse-works,kernel.txt} \
 ```
 
 # Configuring Fuse2
-It is now recommended to follow the BLFS guide on Fuse3 at
-https://linuxfromscratch.org/blfs/view/svn/postlfs/fuse.html
+Some options regarding mount policy can be set in the file `/etc/fuse.conf`.
+To install the file run the following command as the ***root*** user:
+```Bash
+cat > /etc/fuse.conf << "EOF"
+# Set the maximum number of FUSE mounts allowed to non-root users.
+# The default is 1000.
+#
+#mount_max = 1000
+
+# Allow non-root users to specify the 'allow_other' or 'allow_root'
+# mount options.
+#
+#user_allow_other
+EOF
+```
