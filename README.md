@@ -3,11 +3,11 @@
 This repository is dedicated to showing you, the user, on how to install some
 packages on an LFS system that do not appear in LFS, MLFS, BLFS, and GLFS.
 
+This project also assumes you are using a SysVinit LFS system.
+
 Such packages that are included are, but not limited to:
 - Fuse-2.9.9 (needed for appimages)
-- Flatpak`*`
-
-`*`: Not in this project yet
+- Flatpak
 
 # Where to read
 
