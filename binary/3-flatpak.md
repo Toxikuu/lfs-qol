@@ -15,6 +15,7 @@ install the Flatpak version instead.
 ## Package Dependencies
 **NOTE: the following packages may not be in their right section.**
 ### Required
+  [AppStream](https://linuxfromscratch.org/blfs/view/svn/general/appstream.html)
   [dbus](https://linuxfromscratch.org/blfs/view/svn/general/dbus.html),
   [elogind](https://linuxfromscratch.org/blfs/view/svn/general/elogind.html),
   [Fuse3](https://linuxfromscratch.org/blfs/view/svn/postlfs/fuse.html),
