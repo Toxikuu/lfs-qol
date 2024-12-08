@@ -45,5 +45,6 @@ books:
 
 # Licenses
 
-The two licenses are named `MIT0-LICENSE` and `CC-LICENSE` (MIT0 and Creative
-Commons Attribution-NonCommercial-ShareAlike 2.0 respectively)
+The three licenses are named `MIT0-LICENSE`, `BLFS-LICENSE`, and `CC-LICENSE`
+(MIT0, BLFS' MIT, and Creative Commons Attribution-NonCommercial-ShareAlike 2.0
+respectively)
