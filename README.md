@@ -25,7 +25,7 @@ depth about it. When viewing on Github, each file should be styled correctly.
 
 # Standards
 
-As stated above, each file is a Mardown file. The exceptions are Git specific
+As stated above, each file is a Markdown file. The exceptions are Git specific
 files and the licenses. If you are viewing these files not on Github, you will
 see how the files themselves are laid out in a text format. Please read
 https://www.markdownguide.org/basic-syntax/ to find out what each symbol is
