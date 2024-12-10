@@ -8,7 +8,7 @@ The libzip package contains a library and utilities for handling zip archives.
 - Build Size: 13M
 - Build Time: less than 0.1 SBU
 
-## Package Dependencies
+## libzip Dependencies
 ### Required
   [GnuTLS](https://linuxfromscratch.org/blfs/view/svn/postlfs/gnutls.html)
 

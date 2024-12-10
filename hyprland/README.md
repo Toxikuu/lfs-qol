@@ -11,7 +11,7 @@ its dependencies that aren't found in the LFS books.
 - [pugixml](./6-pugixml.md)
 - [hyprwayland-scanner](./7-hyprwayland-scanner.md)
 - [aquamarine](./8-aquamarine.md)
-- [liftoff](./9-liftoff.md)
+- [liftoff](./9-libliftoff.md)
 - [Hyprland](./10-hyprland.md)
 - [hyprpaper](./11-hyprpaper.md) (for wallpaper support)
 - [sdbus-c++](./12-sdbus-cpp.md)
