@@ -19,7 +19,8 @@ Yajl is yet another json library.
   [glibc](https://www.linuxfromscratch.org/lfs/view/development/chapter08/glibc.html)
 
 ## Installation of yajl
-As of writing, the last commit to yajl is almost a decade old. With time, vulnerabilities have emerged. Fix these by applying a few patches:
+As of writing, the last commit to yajl is almost a decade old. With time,
+vulnerabilities have emerged. Fix these by applying a few patches:
 ```Bash
 patch -Np1 -i ../yajl-2.1.0-CVE-2017-16516.patch
 patch -Np1 -i ../yajl-2.1.0-CVE-2022-24795.patch
@@ -46,4 +47,8 @@ ninja install
 ```
 
 ## Command Explanations
-  `-D CMAKE_SKIP_INSTALL_RPATH=ON`: This switch makes cmake remove hardcoded library search paths (rpath) when installing a binary executable file or a shared library. This package does not need rpath once it's installed into the standard location, and rpath may sometimes cause unwanted effects or even security issues. 
+  `-D CMAKE_SKIP_INSTALL_RPATH=ON`: This switch makes cmake remove hardcoded
+  library search paths (rpath) when installing a binary executable file or a
+  shared library. This package does not need rpath once it's installed into the
+  standard location, and rpath may sometimes cause unwanted effects or even
+  security issues. 

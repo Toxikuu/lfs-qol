@@ -1,5 +1,6 @@
 # Introduction to libev-4.33
-Libev is a full-featured, high-performant event loop loosely modelled after libevent.
+Libev is a full-featured, high-performant event loop loosely modelled after
+libevent.
 
 ## Package Information
 - Download (HTTP): http://dist.schmorp.de/libev/libev-4.33.tar.gz
