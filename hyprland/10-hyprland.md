@@ -9,10 +9,11 @@ other Wayland compositors and be highly customizable, written in C++.
 - Build Size: 482M
 - Build Time: 1.1 SBU
 
-## Package Dependencies
+## Hyprland Dependencies
 ### Required
   [aquamarine](./8-aquamarine.md),
   [Cairo](https://linuxfromscratch.org/blfs/view/svn/x/cairo.html),
+  [CMake](https://linuxfromscratch.org/blfs/view/svn/general/cmake.html),
   [elogind](https://linuxfromscratch.org/blfs/view/svn/general/elogind.html),
   [GLib2](https://linuxfromscratch.org/blfs/view/svn/general/glib2.html),
   [Glslang](https://linuxfromscratch.org/blfs/view/svn/x/glslang.html),
