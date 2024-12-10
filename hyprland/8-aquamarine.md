@@ -24,8 +24,8 @@ compositors. It was made to break Hyprland's dependency on wlroots.
   [Pixman](https://linuxfromscratch.org/blfs/view/svn/general/pixman.html),
   [pugixml](./6-pugixml.md),
   [seatd](https://glfs-book.github.io/glfs/shareddeps/seatd.html),
-  [wayland](https://linuxfromscratch.org/blfs/view/svn/general/wayland.html), and
-  [wayland-protocols](https://linuxfromscratch.org/blfs/view/svn/general/wayland-protocols.html)
+  [Wayland](https://linuxfromscratch.org/blfs/view/svn/general/wayland.html), and
+  [Wayland-Protocols](https://linuxfromscratch.org/blfs/view/svn/general/wayland-protocols.html)
 
 ### Recommended
   [hwdata](https://linuxfromscratch.org/blfs/view/svn/general/hwdata.html)
