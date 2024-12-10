@@ -47,7 +47,7 @@ other Wayland compositors and be highly customizable, written in C++.
   build and install plugins)
 
 ## Installation of Hyprland
-Install Hyprland by following the command below:
+Install Hyprland by following the commands below:
 ```Bash
 rm -fv scripts/generateVersion.sh &&
 make release PREFIX=/usr
