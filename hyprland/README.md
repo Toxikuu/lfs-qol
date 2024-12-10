@@ -13,6 +13,5 @@ its dependencies that aren't found in the LFS books.
 - [aquamarine](./8-aquamarine.md)
 - [liftoff](./9-libliftoff.md)
 - [Hyprland](./10-hyprland.md)
-- [hyprpaper](./11-hyprpaper.md) (for wallpaper support)
-- [sdbus-c++](./12-sdbus-cpp.md)
-- [xdg-desktop-portal-hyprland](./13-xdg-desktop-portal-hyprland.md) (for portal support in Hyprland)
+- [sdbus-c++](./11-sdbus-cpp.md)
+- [xdg-desktop-portal-hyprland](./12-xdg-desktop-portal-hyprland.md) (for portal support in Hyprland)
