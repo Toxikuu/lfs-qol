@@ -15,7 +15,7 @@ ecosystem of packages and may be used by other packages not in the ecosystem.
   [hyprutils](./1-hyprutils.md)
 
 ## Installation of hyprlang
-Now install hyprlang by following the commands below:
+Install hyprlang by following the commands below:
 ```Bash
 mkdir build &&
 cd    build &&
