@@ -8,6 +8,7 @@ This project also assumes you are using a SysVinit LFS system.
 Such packages that are included are, but not limited to:
 - Fuse-2.9.9 (needed for appimages)
 - Flatpak
+- Hyprland
 
 # Where to read
 
