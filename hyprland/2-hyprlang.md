@@ -1,21 +1,21 @@
-# Introduction to hyprutils-0.2.6
-The hyprutils package provides a utility library that is used by the entire
-Hypr ecosystem.
+# Introduction to hyprlang-0.5.3
+The hyprlang package provides a configuration language used by the Hypr
+ecosystem of packages and may be used by other packages not in the ecosystem.
 
 ## Package Information
-- Download (HTTP): https://github.com/hyprwm/hyprutils/archive/refs/tags/v0.2.6.tar.gz
-- Download md5sum: 0ada5cb26f08fd2ec9b0a248d7de0b48
-- Download Size: 24K
-- Build Size: 2.1M
+- Download (HTTP): https://github.com/hyprwm/hyprlang/archive/refs/tags/v0.5.3.tar.gz
+- Download md5sum: daec6dd0f8c6b4c86969f1d000f2ab16
+- Download Size: 56K
+- Build Size: 2.0M
 - Build Time: less than 0.1 SBU
 
-## hyprutils Dependencies
+## hyprlang Dependencies
 ### Required
   [CMake](https://linuxfromscratch.org/blfs/view/svn/general/cmake.html) and
-  [Pixman](https://linuxfromscratch.org/blfs/view/svn/general/pixman.html)
+  [hyprutils](./1-hyprutils.md)
 
-## Installation of hyprutils
-Install hyprutils by following the commands below:
+## Installation of hyprlang
+Now install hyprlang by following the commands below:
 ```Bash
 mkdir build &&
 cd    build &&
