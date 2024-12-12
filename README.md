@@ -9,6 +9,7 @@ Such packages that are included are, but not limited to:
 - Fuse-2.9.9 (needed for appimages)
 - Flatpak
 - Hyprland
+- SVR4-style tools
 
 # Where to read
 
