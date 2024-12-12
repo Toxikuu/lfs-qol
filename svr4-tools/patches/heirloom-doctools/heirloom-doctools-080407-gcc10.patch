@@ -1,0 +1,11 @@
+--- heirloom-doctools-080407-baseline/troff/nii.c	2024-12-12 21:31:12.340823293 +0300
++++ heirloom-doctools-080407/troff/nii.c	2024-12-12 21:39:55.753837965 +0300
+@@ -165,7 +165,7 @@
+ int	spreadlimit;
+ int	lastrq;
+ long	realpage;
+-int	tryglf;
++extern int	tryglf;
+ char	*gchtab;
+ int	tailflg;
+ int	minflg;
