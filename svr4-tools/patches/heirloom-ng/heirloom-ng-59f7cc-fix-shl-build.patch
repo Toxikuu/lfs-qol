@@ -1,0 +1,20 @@
+--- heirloom-ng-clean/shl/shl.c	2024-12-12 19:06:27.384195017 +0300
++++ heirloom-ng/shl/shl.c	2024-12-12 17:00:09.359367408 +0300
+@@ -306,13 +306,16 @@
+ 	 */
+ 	struct passwd *pwd = getpwuid(myuid);
+ 	struct utmpx utx;
++	struct timeval tv_tmp;
+ 	char *id;
+ 
+ 	memset(&utx, 0, sizeof utx);
+ 	strncpy(utx.ut_line, l->l_line + 5, sizeof utx.ut_line);
+ 	strncpy(utx.ut_user, pwd->pw_name, sizeof utx.ut_user);
+ 	utx.ut_pid = l->l_pid;
+-	gettimeofday(&utx.ut_tv, NULL);
++	gettimeofday(&tv_tmp, NULL);
++	utx.ut_tv.tv_sec = tv_tmp.tv_sec;
++	utx.ut_tv.tv_usec = tv_tmp.tv_usec;
+ 	if ((id = strrchr(l->l_line, '/')) != NULL)
+ 		strncpy(utx.ut_id, id, sizeof utx.ut_id);
+ 	switch (action) {

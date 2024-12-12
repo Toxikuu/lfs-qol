@@ -1,0 +1,10 @@
+--- heirloom-ng-clean/libcommon/prerror.c	2024-12-12 19:06:27.358195016 +0300
++++ heirloom-ng/libcommon/prerror.c	2024-12-12 16:52:25.531354406 +0300
+@@ -7,6 +7,7 @@
+  * SPDX-Licence-Identifier: Zlib
+  */
+ 
++#include <string.h>
+ #include <errno.h>
+ #include "pfmt.h"
+ 
