@@ -5,8 +5,8 @@ Heirloom-ex-vi, also known as The Traditional Vi, is a portable version of 2.11B
 - Download (HTTP): https://github.com/n-t-roff/heirloom-ex-vi/archive/bd1f886598d20d457885c5c189fea34b027cbdef.zip
 - Download md5sum: 4b533b4ff07b42a06b2bd51e6132c761
 - Download Size: 372K
-- Build Size: TODO
-- Build Time: TODO
+- Build Size: 2.5M
+- Build Time: less than 0.1 SBU
 
 ## Additional Download
 - Required patch: [heirloom-ex-vi-bd1f88-paths.patch](./patches/heirloom-ex-vi/heirloom-ex-vi-bd1f88-paths.patch)
