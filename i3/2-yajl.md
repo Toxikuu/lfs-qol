@@ -6,7 +6,7 @@ Yajl is yet another json library.
 - Download md5sum: 6887e0ed7479d2549761a4d284d3ecb0
 - Download Size: 84K
 - Build Size: 2.3M
-- Build Time: < 0.1 SBU
+- Build Time: less than 0.1 SBU
 
 ## Additional Downloads
 - Required patch: https://gitlab.archlinux.org/archlinux/packaging/packages/yajl/-/raw/main/yajl-2.1.0-CVE-2017-16516.patch
@@ -22,14 +22,15 @@ Yajl is yet another json library.
 As of writing, the last commit to yajl is almost a decade old. With time,
 vulnerabilities have emerged. Fix these by applying a few patches:
 ```Bash
-patch -Np1 -i ../yajl-2.1.0-CVE-2017-16516.patch
-patch -Np1 -i ../yajl-2.1.0-CVE-2022-24795.patch
+patch -Np1 -i ../yajl-2.1.0-CVE-2017-16516.patch &&
+patch -Np1 -i ../yajl-2.1.0-CVE-2022-24795.patch &&
 patch -Np1 -i ../yajl-2.1.0-memory_leak.patch
 ```
 
 Install yajl by executing the following commands:
 ```Bash
-mkdir -pv build && cd build
+mkdir -pv build &&
+cd        build &&
 
 cmake \
     -D CMAKE_INSTALL_PREFIX=/usr    \

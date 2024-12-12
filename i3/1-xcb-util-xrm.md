@@ -7,7 +7,7 @@ the other XCB Utilities.
 - Download md5sum: 6b5249f1e4e4e1c5e367d894d27dd0c0
 - Download Size: 328K
 - Build Size: 2.7M
-- Build Time: < 0.1 SBU
+- Build Time: less than 0.1 SBU
 
 ## xcb-util-xrm Dependencies
 ### Required
@@ -17,12 +17,10 @@ the other XCB Utilities.
 ## Installation of xcb-util-xrm
 Install xcb-util-xrm by executing the following commands:
 ```Bash
-mkdir -pv build && cd build
+mkdir -pv build &&
+cd        build &&
 
-../configure            \
-    --prefix=/usr       \
-    --disable-static   &&
-
+../configure --prefix=/usr --disable-static &&
 make
 ```
 
