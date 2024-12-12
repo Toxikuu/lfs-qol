@@ -19,7 +19,7 @@ above.
 
 If you want to know more about old UNIXen' path conventions, and are willing to fall down a rabbit hole
 of 80s-90s UNIX variants, DEC equipment and various other old UNIX conventions, old hardware and everyday 
-jobs of UNIX sysops of the 90s, a much more comprehensove guide can be found on [here](https://unix.stackexchange.com/a/448799/5132).
+jobs of UNIX sysops of the 90s, a much more comprehensive guide can be found on [here](https://unix.stackexchange.com/a/448799/5132).
 
 # A note on Linux, UNIX SVR4 and BSD
 
