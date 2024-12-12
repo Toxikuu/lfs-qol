@@ -1,0 +1,36 @@
+diff -Naur heirloom-devtools-070527-baseline/make/bsd/bsd.cc heirloom-devtools-070527/make/bsd/bsd.cc
+--- heirloom-devtools-070527-baseline/make/bsd/bsd.cc	2024-12-12 22:44:47.339947054 +0300
++++ heirloom-devtools-070527/make/bsd/bsd.cc	2024-12-12 22:45:26.083948140 +0300
+@@ -50,7 +50,7 @@
+ extern SIG_PF
+ bsdsignal (int Signal, SIG_PF Handler)
+ {
+-  auto SIG_PF                   previous_handler;
++  SIG_PF                   previous_handler;
+ #ifdef SUN5_0
+ #ifdef sun
+   previous_handler = sigset (Signal, Handler);
+diff -Naur heirloom-devtools-070527-baseline/make/mksh/dosys.cc heirloom-devtools-070527/make/mksh/dosys.cc
+--- heirloom-devtools-070527-baseline/make/mksh/dosys.cc	2024-12-12 22:44:47.338947054 +0300
++++ heirloom-devtools-070527/make/mksh/dosys.cc	2024-12-12 22:45:49.732948803 +0300
+@@ -809,7 +809,7 @@
+ 	int			status;
+ 	Boolean			command_generated_output = false;
+ 
+-	command->text.p = (int) nul_char;
++	command->text.p = (wchar_t*) nul_char;
+ 	WCSTOMBS(mbs_buffer, command->buffer.start);
+ 	if ((fd = popen(mbs_buffer, "r")) == NULL) {
+ 		WCSTOMBS(mbs_buffer, command->buffer.start);
+diff -Naur heirloom-devtools-070527-baseline/make/src/doname.cc heirloom-devtools-070527/make/src/doname.cc
+--- heirloom-devtools-070527-baseline/make/src/doname.cc	2024-12-12 22:44:47.335947054 +0300
++++ heirloom-devtools-070527/make/src/doname.cc	2024-12-12 22:46:05.173949236 +0300
+@@ -72,7 +72,7 @@
+ 
+ #include <signal.h>
+ 
+-#if defined (__sun) || defined (__linux__)
++#if defined (__sun) 
+ #	include <stropts.h>
+ #endif
+ 
