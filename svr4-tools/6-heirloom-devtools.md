@@ -51,7 +51,7 @@ Otherwise, execute the following commands:
 sed -i 's-/sbin/sh-/bin/sh-g' mk.config
 ```
 
-Compile heirloom-ng by following the commands below:
+Compile heirloom-devtools by following the commands below:
 ```Bash
 make
 ```
