@@ -1,0 +1,10 @@
+--- heirloom-ng-clean/chroot/chroot.c	2024-12-12 19:06:27.337195016 +0300
++++ heirloom-ng/chroot/chroot.c	2024-12-12 16:52:24.610354380 +0300
+@@ -18,6 +18,7 @@
+ #include <unistd.h>
+ #define ROOTUID 0
+ 
++void usage(void);
+ char *progname;
+ 
+ int main(int argc, char *argv[]) {

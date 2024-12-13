@@ -1,0 +1,22 @@
+diff -Naur pkgsuite-ea428661c1eb40ae7ad24d6ff449bfeda59de725-baseline/src/mk.config.head pkgsuite-ea428661c1eb40ae7ad24d6ff449bfeda59de725/src/mk.config.head
+--- pkgsuite-ea428661c1eb40ae7ad24d6ff449bfeda59de725-baseline/src/mk.config.head	2024-12-12 23:44:33.871047592 +0300
++++ pkgsuite-ea428661c1eb40ae7ad24d6ff449bfeda59de725/src/mk.config.head	2024-12-12 23:45:11.873048657 +0300
+@@ -8,10 +8,10 @@
+ LNS = ln -s
+ 
+ # Where to place binaries.
+-BINDIR=$(PREFIX)/bin
++BINDIR=$(PREFIX)/5bin
+ # Where to place superuser-only binaries. This may be
+ # the same place as the binary directory.
+-SBINDIR=$(PREFIX)/sbin
++SBINDIR=$(PREFIX)/5sbin
+ # Where to place configuration files.
+ ETCDIR=/etc
+ # Where to place (read-only) helper files.
+@@ -19,4 +19,4 @@
+ # Where to place the database of installed packages.
+ VSADMDIR=$(VAR)/sadm
+ # Where to place the manual pages.
+-MANDIR=$(PREFIX)/share/man
++MANDIR=$(PREFIX)/share/man/5man

@@ -10,6 +10,7 @@ Such packages that are included are, but not limited to:
 - Flatpak
 - Hyprland
 - i3
+- SVR4-style tools
 
 # Where to read
 

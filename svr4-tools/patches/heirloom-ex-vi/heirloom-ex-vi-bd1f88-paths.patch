@@ -1,0 +1,18 @@
+diff -Naur heirloom-ex-vi-bd1f886598d20d457885c5c189fea34b027cbdef/Makefile.in heirloom-ex-vi-bd1f886598d20d457885c5c189fea34b027cbdef-patched/Makefile.in
+--- heirloom-ex-vi-bd1f886598d20d457885c5c189fea34b027cbdef/Makefile.in	2022-05-28 22:59:12.000000000 +0300
++++ heirloom-ex-vi-bd1f886598d20d457885c5c189fea34b027cbdef-patched/Makefile.in	2024-12-13 00:08:07.261012593 +0300
+@@ -79,10 +79,10 @@
+ # Destinations for installation. $(PRESERVEDIR) is used for recovery files.
+ # It will get mode 1777.
+ #
+-PREFIX		= /usr/local
+-BINDIR		= $(PREFIX)/bin
+-LIBEXECDIR	= $(PREFIX)/libexec
+-MANDIR		= $(PREFIX)/share/man
++PREFIX		= /usr
++BINDIR		= $(PREFIX)/5bin
++LIBEXECDIR	= $(PREFIX)/5lib
++MANDIR		= $(PREFIX)/share/man/5man
+ PRESERVEDIR	= /var/preserve
+ 
+ #
