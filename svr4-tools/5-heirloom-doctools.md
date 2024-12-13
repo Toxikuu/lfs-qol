@@ -46,7 +46,7 @@ sed -i 's-/sbin/sh-/bin/sh-g' mk.config &&
 sed -i 's-/sbin/sh-/bin/sh-g' stuff/showfont.sh
 ```
 
-Compile heirloom-ng by following the commands below:
+Compile heirloom-doctools by following the commands below:
 ```Bash
 make -j1
 ```

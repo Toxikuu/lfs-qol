@@ -27,7 +27,7 @@ Now, apply a patch to fix the build with glibc 2.34 or newer:
 patch -Np1 -i ../heirloom-sh-050706-glibc234.patch
 ```
 
-Compile heirloom-ng by following the commands below:
+Compile heirloom-sh by following the commands below:
 ```Bash
 make
 ```

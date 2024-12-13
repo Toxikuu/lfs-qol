@@ -49,6 +49,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh
 Otherwise, execute the following commands:
 ```Bash
 sed -i 's-/sbin/sh-/bin/sh-g' mk.config
+```
 
 Compile heirloom-ng by following the commands below:
 ```Bash

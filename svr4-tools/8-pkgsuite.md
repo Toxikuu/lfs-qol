@@ -29,7 +29,7 @@ Apply a patch to make the installation paths conform with the others in this cat
 patch -Np1 -i ../pkgsuite-ea4286-paths.patch
 ```
 
-Compile heirloom-ng by following the commands below:
+Compile pkgsuite by following the commands below:
 ```Bash
 cd src
 ./configure

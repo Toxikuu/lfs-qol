@@ -37,7 +37,7 @@ Apply a patch to make the installation paths conform with the others in this cat
 patch -Np1 -i ../heirloom-ex-vi-bd1f88-paths.patch
 ```
 
-Compile heirloom-ng by following the commands below:
+Compile heirloom-ex-vi by following the commands below:
 ```Bash
 ./configure
 make
