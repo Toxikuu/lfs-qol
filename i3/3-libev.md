@@ -12,7 +12,6 @@ libevent.
 ## libev Dependencies
 ### Required
   [cmake](https://www.linuxfromscratch.org/blfs/view/svn/general/cmake.html)
-  [glibc](https://www.linuxfromscratch.org/lfs/view/development/chapter08/glibc.html)
 
 ## Installation of libev
 Install libev by executing the following commands:
@@ -20,9 +19,7 @@ Install libev by executing the following commands:
 mkdir -pv build &&
 cd        build &&
 
-../configure        \
-    --prefix=/usr  &&
-
+../configure --prefix=/usr &&
 make
 ```
 
