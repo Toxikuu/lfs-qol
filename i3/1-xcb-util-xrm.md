@@ -11,14 +11,14 @@ the other XCB Utilities.
 
 ## xcb-util-xrm Dependencies
 ### Required
-  [util-macros](https://www.linuxfromscratch.org/blfs/view/svn/x/util-macros.html),
+  [util-macros](https://www.linuxfromscratch.org/blfs/view/svn/x/util-macros.html) and
   [xcb-util](https://www.linuxfromscratch.org/blfs/view/svn/x/xcb-util.html)
 
 ## Installation of xcb-util-xrm
 Install xcb-util-xrm by executing the following commands:
 ```Bash
-mkdir -pv build &&
-cd        build &&
+mkdir -v build &&
+cd       build &&
 
 ../configure --prefix=/usr --disable-static &&
 make

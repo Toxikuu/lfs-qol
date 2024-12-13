@@ -16,8 +16,8 @@ libevent.
 ## Installation of libev
 Install libev by executing the following commands:
 ```Bash
-mkdir -pv build &&
-cd        build &&
+mkdir -v build &&
+cd       build &&
 
 ../configure --prefix=/usr &&
 make

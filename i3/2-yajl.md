@@ -15,7 +15,7 @@ Yajl is yet another json library.
 
 ## yajl Dependencies
 ### Required
-  [cmake](https://www.linuxfromscratch.org/blfs/view/svn/general/cmake.html)
+  [cmake](https://www.linuxfromscratch.org/blfs/view/svn/general/cmake.html) and
   [glibc](https://www.linuxfromscratch.org/lfs/view/development/chapter08/glibc.html)
 
 ## Installation of yajl
@@ -29,8 +29,8 @@ patch -Np1 -i ../yajl-2.1.0-memory_leak.patch
 
 Install yajl by executing the following commands:
 ```Bash
-mkdir -pv build &&
-cd        build &&
+mkdir -v build &&
+cd       build &&
 
 cmake \
     -D CMAKE_INSTALL_PREFIX=/usr    \
