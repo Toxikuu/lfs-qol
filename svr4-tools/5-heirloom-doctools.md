@@ -53,5 +53,8 @@ make -j1
 
 Now as the ***root*** user:
 ```Bash
-make -j1 install
+make install
 ```
+
+## Command Explanations
+   ``make -j1``  - due to a race condition in ``pic``, force -j1 so we can build reliably.
