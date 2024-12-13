@@ -1,6 +1,6 @@
 # Introduction to star from schilytools-2024-03-21
 Due to various upstream-acknowledged issues in heirloom-ng tar, it is preferred
-to use a different SVR4-compatible tar implementation. This package is exactly that..
+to use a different SVR4-compatible tar implementation. This package is exactly that.
 
 ## Package Information
 - Download (HTTP): https://codeberg.org/schilytools/schilytools/releases/download/2024-03-21/schily-2024-03-21.tar.bz2
