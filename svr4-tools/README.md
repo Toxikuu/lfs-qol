@@ -11,4 +11,4 @@ from the Heirloom project patched up to work again or modern forks of them.
 - [heirloom-devtools](./6-heirloom-devtools.md)
 - [s-nail](./7-s-nail.md)
 - [pkgsuite](./8-pkgsuite.md)
-- [heirloom-ex-vi](./9-ex-vi.patch)
+- [heirloom-ex-vi](./9-ex-vi.md)
