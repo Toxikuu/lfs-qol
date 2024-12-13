@@ -14,7 +14,7 @@ heirloom-sh is a portable variant of the traditional Unix Bourne Shell.
 
 ## Package Dependencies
 ### Required
-  [heirloom-ng](./2-heirloom-ng.md), and
+  [heirloom-ng](./2-heirloom-ng.md)
 
 ## Installation of heirloom-sh
 Apply a patch to bring up the source to the last upstream commit:
@@ -37,7 +37,7 @@ Now as the ***root*** user:
 make install
 ```
 ## Configuring heirloom-sh
-Update /etc/shells to include the Bourne shell program names (as the ***root*** user):
+Update ``/etc/shells`` to include the Bourne shell program names (as the ***root*** user):
 ```Bash
 cat >> /etc/shells << "EOF"
 /usr/5bin/sh

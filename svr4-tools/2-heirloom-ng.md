@@ -19,7 +19,7 @@ with traditional Unix while incorporating additional features necessary today.
 
 ## Package Dependencies
 ### Required
-  [UnZip](https://www.linuxfromscratch.org/blfs/view/svn/general/unzip.html) (to unpack the distribution), and
+  [UnZip](https://www.linuxfromscratch.org/blfs/view/svn/general/unzip.html) (to unpack the distribution) and
   [ed](https://www.linuxfromscratch.org/blfs/view/svn/postlfs/ed.html)
 
 ## Installation of heirloom-ng
@@ -48,10 +48,10 @@ patch -Np1 -i ../heirloom-ng-59f7cc-dont-link-nonexistent-files.patch
 
 Compile heirloom-ng by following the commands below:
 ```Bash
-make -j1
+make
 ```
 
 Now as the ***root*** user:
 ```Bash
-make -j1 install
+make install
 ```

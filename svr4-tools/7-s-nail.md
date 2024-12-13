@@ -13,7 +13,7 @@ s-nail is a mail user agent derived from Berkeley Mail 8.1.
   [An MTA](https://www.linuxfromscratch.org/blfs/view/svn/server/mail.html) (at runtime)
 
 ### Optional
-  [MIT Kerberos](https://www.linuxfromscratch.org/blfs/view/svn/postlfs/mitkrb.html)
+  [MIT Kerberos](https://www.linuxfromscratch.org/blfs/view/svn/postlfs/mitkrb.html) and
   [Apache SpamAssassin](https://spamassassin.apache.org)
 
 ## Installation of s-nail
