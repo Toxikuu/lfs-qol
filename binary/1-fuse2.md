@@ -1,3 +1,5 @@
+[Next](./2-ostree.md): OSTree
+
 # Introduction to Fuse2
 FUSE, or Filesystem in Userspace, allows userspace programs to create virtual
 filesystems. This is a really helpful technology, and the current Fuse version

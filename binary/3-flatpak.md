@@ -1,3 +1,5 @@
+[Prev](./2-ostree.md): OSTree
+
 # Introduction to Flatpak-1.14.10
 Flatpak allows you to download apps and run them in a sandbox. It downloads all
 of the dependencies of a given package in a sandbox and allows you to run the
