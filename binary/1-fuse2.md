@@ -1,4 +1,4 @@
-[Next](./2-ostree.md): OSTree
+[Next: OSTree](./2-ostree.md)
 
 # Introduction to Fuse2
 FUSE, or Filesystem in Userspace, allows userspace programs to create virtual

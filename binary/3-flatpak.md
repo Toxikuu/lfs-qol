@@ -1,4 +1,4 @@
-[Prev](./2-ostree.md): OSTree
+[Prev: OSTree](./2-ostree.md)
 
 # Introduction to Flatpak-1.14.10
 Flatpak allows you to download apps and run them in a sandbox. It downloads all
