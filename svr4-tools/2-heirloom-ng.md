@@ -1,6 +1,6 @@
 [Home](../)
 
-[Prev: Preamble](./1-preamble.md) - [Next: star](./3-star.md)
+[Prev: Preamble](./1-preamble.md) - [Next: star from schilytools](./3-star.md)
 
 ***
 
