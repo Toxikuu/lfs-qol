@@ -39,7 +39,7 @@ patch -Np1 -i ../heirloom-ex-vi-bd1f88-paths.patch
 
 Compile heirloom-ex-vi by following the commands below:
 ```Bash
-./configure
+./configure &&
 make
 ```
 
