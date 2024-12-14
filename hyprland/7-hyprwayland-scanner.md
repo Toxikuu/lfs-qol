@@ -1,6 +1,6 @@
 [Home](../)
 
-[Prev: hyprwayland-scanner](./6-hyprwayland-scanner.md) - [Next: aquamarine](./8-aquamarine.md)
+[Prev: pugixml](./6-pugixml.md) - [Next: aquamarine](./8-aquamarine.md)
 
 ***
 
