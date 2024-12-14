@@ -1,3 +1,9 @@
+[Home](../)
+
+[Prev: aquamarine](./9-aquamarine.md) - [Next: sdbus-c++](./11-sdbus-cpp.md)
+
+***
+
 # Introduction to Hyprland-0.45.2
 Hyprland is an independent Wayland compositor aiming to have more features than
 other Wayland compositors and be highly customizable, written in C++.

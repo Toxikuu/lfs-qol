@@ -1,3 +1,9 @@
+[Home](../)
+
+[Prev: aqaumarine](./7-aquamarine.md) - [Next: libliftoff](./9-libliftoff.md)
+
+***
+
 # Introduction to aquamarine-0.5.0
 The aquamarine package provides a rendering backend library to use with Wayland
 compositors. It was made to break Hyprland's dependency on wlroots.

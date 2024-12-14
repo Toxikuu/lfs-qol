@@ -1,3 +1,9 @@
+[Home](../)
+
+[Prev: hyprcursor](./5-hyprcursor.md) - [Next: hyprwayland-scanner](./7-hyprwayland-scanner.md)
+
+***
+
 # Introduction to pugixml-1.14
 The pugixml package provides a light-weight XML parser for C++.
 

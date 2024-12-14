@@ -1,3 +1,9 @@
+[Home](../)
+
+[Prev: tomlplusplus](./3-tomlplusplus.md) - [Next: hyprcursor](./5-hyprcursor.md)
+
+***
+
 # Introduction to libzip-1.11.2
 The libzip package contains a library and utilities for handling zip archives.
 

@@ -1,3 +1,5 @@
+[Home](../)
+
 [Prev: Fuse2](./2-fuse2.md) - [Next: Flatpak](./3-flatpak.md)
 
 ***

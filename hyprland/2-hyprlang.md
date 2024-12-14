@@ -1,3 +1,9 @@
+[Home](../)
+
+[Prev: hyprutils](./1-hyprutils.md) - [Next: tomlplusplus](./3-tomlplusplus.md)
+
+***
+
 # Introduction to hyprlang-0.5.3
 The hyprlang package provides a configuration language used by the Hypr
 ecosystem of packages and may be used by other packages not in the ecosystem.

@@ -1,3 +1,9 @@
+[Home](../)
+
+[Prev: hyprwayland-scanner](./6-hyprwayland-scanner.md) - [Next: aquamarine](./8-aquamarine.md)
+
+***
+
 # Introduction to hyprwayland-scanner-0.4.2
 The hyprwayland-scanner package provides a Hyprland-specific implementation of
 `wayland-scanner` provided by

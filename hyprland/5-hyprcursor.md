@@ -1,3 +1,9 @@
+[Home](../)
+
+[Prev: libzip](./4-libzip.md) - [Next: pugixml](./6-pugixml.md)
+
+***
+
 # Introduction to hyprcursor-0.1.10
 The hyprcursor package provides a cursor format, an alternative to xcursor,
 and is used by some Wayland compositors outside the Hypr ecosystem.

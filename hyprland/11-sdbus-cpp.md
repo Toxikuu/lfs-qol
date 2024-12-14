@@ -1,3 +1,9 @@
+[Home](../)
+
+[Prev: Hyprland](./10-hyprland.md) - [Next: xdg-desktop-portal-hyprland](./12-xdg-desktop-portal-hyprland.md)
+
+***
+
 # Introduction to sdbus-c++-2.1.0
 The sdbus-c++ package provides a C++ API for D-Bus.
 

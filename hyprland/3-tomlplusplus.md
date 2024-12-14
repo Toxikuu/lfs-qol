@@ -1,3 +1,9 @@
+[Home](../)
+
+[Prev: hyprlang](./2-hyprlang.md) - [Next: libzip](./4-libzip.md)
+
+***
+
 # Introduction to tomlplusplus
 The tomlplusplus package is a TOML configuration parser for C++.
 

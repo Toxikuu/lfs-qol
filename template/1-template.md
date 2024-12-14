@@ -1,4 +1,6 @@
-[Prev: PREV-PKG](./0-prev-pkg.md) - [Next: NEXT-PKG](2-next-pkg.md)
+[Home](../)
+
+[Prev: PREV-PKG](./0-prev-pkg.md) - [Next: NEXT-PKG](./2-next-pkg.md)
 
 ***
 

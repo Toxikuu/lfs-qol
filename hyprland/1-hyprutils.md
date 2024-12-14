@@ -1,3 +1,9 @@
+[Home](../)
+
+[Next: hyprlang](./2-hyprlang.md)
+
+***
+
 # Introduction to hyprutils-0.2.6
 The hyprutils package provides a utility library that is used by the entire
 Hypr ecosystem.
