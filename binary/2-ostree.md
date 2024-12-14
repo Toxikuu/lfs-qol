@@ -1,4 +1,5 @@
-[Prev](./1-fuse2.md): Fuse2 - [Next](./3-flatpak.md): Flatpak
+<div style="text-align: left">[Prev](./2-fuse2.md)</div> <div style="text-align: right">[Next](./3-flatpak.md)</div>
+<div style="text-align: left">Fuse2</div> <div style="text-align: right">Flatpak</div>
 
 # Introduction to OSTree-2024.9
 The OSTree package for container deployment and the like. It is required by
