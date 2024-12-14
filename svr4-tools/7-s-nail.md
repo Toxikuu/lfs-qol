@@ -4,7 +4,7 @@
 
 ***
 
-# Introduction to nail-14.9.25
+# Introduction to s-nail-14.9.25
 s-nail is a mail user agent derived from Berkeley Mail 8.1.
 
 ## Package Information

@@ -1,6 +1,6 @@
 [Home](../)
 
-[Prev: s-nail](./7-s-nail.md) - [Next: ex-vi](./9-ex-vi.md)
+[Prev: s-nail](./7-s-nail.md) - [Next: heirloom-ex-vi](./9-ex-vi.md)
 
 ***
 
