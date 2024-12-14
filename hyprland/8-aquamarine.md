@@ -1,6 +1,6 @@
 [Home](../)
 
-[Prev: aqaumarine](./7-aquamarine.md) - [Next: libliftoff](./9-libliftoff.md)
+[Prev: hyprwayland-scanner](./7-hyprwayland-scanner.md) - [Next: libliftoff](./9-libliftoff.md)
 
 ***
 
