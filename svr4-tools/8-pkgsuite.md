@@ -31,8 +31,8 @@ patch -Np1 -i ../pkgsuite-ea4286-paths.patch
 
 Compile pkgsuite by following the commands below:
 ```Bash
-cd src
-./configure
+cd src &&
+./configure &&
 make
 ```
 
