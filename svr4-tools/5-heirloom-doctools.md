@@ -1,3 +1,9 @@
+[Home](../)
+
+[Prev: heirloom-sh](./4-heirloom-sh.md) - [Next: heirloom-devtools](./6-heirloom-devtools.md)
+
+***
+
 # Introduction to heirloom-doctools-080407
 heirloom-doctools is a package that provides troff, nroff and related tools.
 Those tools are enhanced versions of the tools released as a part of

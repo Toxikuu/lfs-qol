@@ -1,3 +1,9 @@
+[Home](../)
+
+[Prev: heirloom-ng](./2-heirloom-ng.md) - [Next: heirloom-sh](./4-heirloom-sh.md)
+
+***
+
 # Introduction to star from schilytools-2024-03-21
 Due to various upstream-acknowledged issues in heirloom-ng tar, it is preferred
 to use a different SVR4-compatible tar implementation. This package is exactly that.

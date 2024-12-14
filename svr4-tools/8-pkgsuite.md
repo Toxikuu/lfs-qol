@@ -1,3 +1,9 @@
+[Home](../)
+
+[Prev: s-nail](./7-s-nail.md) - [Next: ex-vi](./9-ex-vi.md)
+
+***
+
 # Introduction to pkgsuite-ea4286
 pkgsuite is a patched-up version of the Heirloom Packaging tools, which is itself a patched-up
 portable version of the UNIX SVR4 packaging utilities.

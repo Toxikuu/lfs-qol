@@ -1,3 +1,9 @@
+[Home](../)
+
+[Prev: pkgsuite](./8-pkgsuite.md)
+
+***
+
 # Introduction to heirloom-ex-vi-bd1f88
 Heirloom-ex-vi, also known as The Traditional Vi, is a portable version of 2.11BSD/SVR4 vi.
 

@@ -1,3 +1,9 @@
+[Home](../)
+
+[Next: heirloom-ng](./2-heirloom-ng.md)
+
+***
+
 # A note on paths, or a quick history lesson
 
 The packages in this category are installed to various non-standard locations

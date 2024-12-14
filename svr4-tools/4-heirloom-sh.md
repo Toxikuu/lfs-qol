@@ -1,3 +1,9 @@
+[Home](../)
+
+[Prev: star from shilytools](./3-star.md) - [Next: heirloom-doctools](./5-heirloom-doctools.md)
+
+***
+
 # Introduction to heirloom-sh-050706
 heirloom-sh is a portable variant of the traditional Unix Bourne Shell.
 

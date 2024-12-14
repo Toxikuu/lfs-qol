@@ -1,3 +1,9 @@
+[Home](../)
+
+[Prev: heirloom-devtools](./6-heirloom-devtools.md) - [Next: pkgsuite](./8-pkgsuite.md)
+
+***
+
 # Introduction to nail-14.9.25
 s-nail is a mail user agent derived from Berkeley Mail 8.1.
 

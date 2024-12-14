@@ -1,3 +1,9 @@
+[Home](../)
+
+[Prev: heirloom-doctools](./5-heirloom-doctools.md) - [Next: s-nail](./7-s-nail.md)
+
+***
+
 # Introduction to heirloom-devtools-070527
 heirloom-devtools is a package that provides yacc, lex, m4, make and SCCS.
 Those tools are portable derivatives of the tools released as a part of
