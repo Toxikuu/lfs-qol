@@ -1,3 +1,9 @@
+[Home](../)
+
+[Prev: aquamarine](./8-aquamarine.md) - [Next: Hyprland](./10-hyprland.md)
+
+***
+
 # Introduction to libliftoff
 The libliftoff packages provides a library that handles KMS planes.
 
