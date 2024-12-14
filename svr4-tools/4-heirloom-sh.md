@@ -1,6 +1,6 @@
 [Home](../)
 
-[Prev: star from shilytools](./3-star.md) - [Next: heirloom-doctools](./5-heirloom-doctools.md)
+[Prev: star from schilytools](./3-star.md) - [Next: heirloom-doctools](./5-heirloom-doctools.md)
 
 ***
 
