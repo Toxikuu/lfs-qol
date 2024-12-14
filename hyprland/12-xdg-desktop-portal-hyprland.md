@@ -1,3 +1,9 @@
+[Home](../)
+
+[Prev: sdbus-c++](./11-sdbus-cpp.md)
+
+***
+
 # Introduction to xdg-desktop-portal-hyprland-1.3.8
 The xdg-desktop-portal-hyprland package provides a portal backend for Hyprland.
 
