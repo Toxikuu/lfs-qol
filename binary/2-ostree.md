@@ -1,5 +1,7 @@
 [Prev: Fuse2](./2-fuse2.md) - [Next: Flatpak](./3-flatpak.md)
 
+***
+
 # Introduction to OSTree-2024.9
 The OSTree package for container deployment and the like. It is required by
 [Flatpak](./3-flatpak.md).

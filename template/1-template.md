@@ -1,3 +1,7 @@
+[Prev: PREV-PKG](./0-prev-pkg.md) - [Next: NEXT-PKG](2-next-pkg.md)
+
+***
+
 # Introduction to Package-$PACKAGE-VERSION
 Explain what Package does and why the user may want or need it.
 
