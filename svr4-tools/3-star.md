@@ -25,9 +25,9 @@ make
 Now install star and supplementary tools as the ***root*** user:
 ```Bash
 install -v -m755 -d /usr/5bin &&
-install -v -m755 star/OBJ/x86_64-linux-gcc/star /usr/5bin &&
-install -v -m755 star_sym/OBJ/x86_64-linux-gcc/star_sym /usr/5bin &&
-install -v -m755 tartest/OBJ/x86_64-linux-gcc/tartest /usr/5bin &&
+install -v -m755 star/OBJ/*/star /usr/5bin &&
+install -v -m755 star_sym/OBJ/*/star_sym /usr/5bin &&
+install -v -m755 tartest/OBJ/*/tartest /usr/5bin &&
 install -v -m755 -d /usr/share/man/5man/man1 &&
 install -v -m644 star/star.1 /usr/share/man/5man/man1 &&
 install -v -m644 star_sym/star_sym.1 /usr/share/man/5man/man1 &&
