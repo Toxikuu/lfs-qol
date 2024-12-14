@@ -1,3 +1,9 @@
+[Home](../)
+
+[Prev: Preamble](./1-preamble.md) - [Next: star](./3-star.md)
+
+***
+
 # Introduction to heirloom-ng-59f7cc
 Heirloom-ng is a collection of standard Unix utilities that is intended to provide maximum compatibility
 with traditional Unix while incorporating additional features necessary today.
