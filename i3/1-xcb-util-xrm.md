@@ -1,3 +1,9 @@
+[Home](../)
+
+[Next: yajl](./2-yajl.md)
+
+***
+
 # Introduction to xcb-util-xrm-1.3
 XCB utility functions for the X resource manager. xcb-util-xrm is separate from
 the other XCB Utilities.
