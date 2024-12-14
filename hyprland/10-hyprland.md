@@ -1,6 +1,6 @@
 [Home](../)
 
-[Prev: aquamarine](./9-aquamarine.md) - [Next: sdbus-c++](./11-sdbus-cpp.md)
+[Prev: libliftoff](./9-libliftoff.md) - [Next: sdbus-c++](./11-sdbus-cpp.md)
 
 ***
 
