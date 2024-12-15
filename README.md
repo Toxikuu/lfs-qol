@@ -46,6 +46,10 @@ books:
 - Install package
 - Configuration if necessary
 
+Please read
+[BLFS' Important Information](https://linuxfromscratch.org/blfs/view/svn/introduction/important.html)
+for more information.
+
 # Licenses
 
 The three licenses are named `MIT0-LICENSE`, `BLFS-LICENSE`, and `CC-LICENSE`
