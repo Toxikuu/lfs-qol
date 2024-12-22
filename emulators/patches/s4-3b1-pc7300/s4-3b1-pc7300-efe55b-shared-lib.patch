@@ -1,0 +1,27 @@
+diff -Naur s4-3b1-pc7300-efe55b8cc917e3e27bcae9786c5b5dec0469be45/Makefile s4-3b1-pc7300-efe55b8cc917e3e27bcae9786c5b5dec0469be45-fixed/Makefile
+--- s4-3b1-pc7300-efe55b8cc917e3e27bcae9786c5b5dec0469be45/Makefile	2024-12-21 17:25:33.192401481 +0300
++++ s4-3b1-pc7300-efe55b8cc917e3e27bcae9786c5b5dec0469be45-fixed/Makefile	2024-12-21 17:25:51.228399762 +0300
+@@ -14,12 +14,12 @@
+ 
+ INC	= -I.
+ 
+-DEBUG   = -g -Wall 
++DEBUG   = -g -Wall -fPIC 
+ OPTIM   = -O
+ CFLAGS  = $(OPTIM) $(DEBUG) $(INC)
+ CC      = gcc
+ 
+-S4LIB	= libs4.a
++S4LIB	= libs4.so
+ 
+ S4DATE 	 = s4date
+ S4DISK 	 = s4disk
+@@ -52,7 +52,7 @@
+ 	    $(CC) $(CFLAGS) -c -DFsTYPE=2 $<
+ 
+ $(S4LIB):   $(LIBOBJ)
+-	    $(AR) rvu $(S4LIB) $(LIBOBJ)
++	    $(CC) -shared -o $(S4LIB) $(LIBOBJ)
+ 
+ $(S4DATE):  s4date.o $(LIB)
+ 	    $(CC) s4date.o $(LIBOPTS) -o $@

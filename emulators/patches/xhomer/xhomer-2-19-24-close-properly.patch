@@ -1,0 +1,38 @@
+diff -Naur xhomer-2-19-24/term_x11.c xhomer-2-19-24-bugfix/term_x11.c
+--- xhomer-2-19-24/term_x11.c	2003-12-13 19:06:36.000000000 +0300
++++ xhomer-2-19-24-bugfix/term_x11.c	2024-12-17 17:50:57.178452712 +0300
+@@ -99,6 +99,9 @@
+ LOCAL int		pro_keyboard_fifo_t;		/* FIFO tail pointer */
+ LOCAL int		pro_keyboard_fifo[PRO_KEYBOARD_FIFO_DEPTH];
+ 
++/* This is used so we can close out properly. */
++LOCAL Atom wm_delete_window;
++
+ int			pro_mouse_x = 0;		/* mouse x */
+ int			pro_mouse_y = 0;		/* mouse y */
+ int			pro_mouse_l = 0;		/* left mouse button */
+@@ -794,6 +797,9 @@
+ 
+ 	  XMapWindow (ProDisplay, ProWindow);
+ 
++	  wm_delete_window = XInternAtom(ProDisplay, "WM_DELETE_WINDOW", False);
++	  XSetWMProtocols(ProDisplay, ProWindow, &wm_delete_window, 1);
++
+ 	  /* Wait for window to become visible */
+ 	  /* XXX #9 server sometimes hangs here with no events */
+ 
+@@ -1783,6 +1789,14 @@
+ int		eventtype;
+ 
+ 
++	/* If we receive a WM_DELETE_WINDOW, close gracefully */
++
++	while (XCheckTypedWindowEvent(ProDisplay, ProWindow, ClientMessage, &event)) {
++              	if ((Atom)event.xclient.data.l[0] == wm_delete_window) {
++                	pro_exit();
++              	}
++	}
++
+ 	/* If multiple events are buffered up, flush them all out */
+ 
+ 	/* XXX bug workaround */

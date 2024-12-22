@@ -1,0 +1,22 @@
+diff -Naur xhomer-2-19-24/UTILITIES/lbn2xhomer.c xhomer-2-19-24-utilfix/UTILITIES/lbn2xhomer.c
+--- xhomer-2-19-24/UTILITIES/lbn2xhomer.c	2006-08-18 04:50:44.000000000 +0400
++++ xhomer-2-19-24-utilfix/UTILITIES/lbn2xhomer.c	2024-12-19 05:07:52.975613470 +0300
+@@ -25,6 +25,7 @@
+ 
+ #include <string.h>
+ #include <stdio.h>
++#include <stdlib.h>
+ 
+ #define SECSIZE		512
+ #define SECTORS		10
+diff -Naur xhomer-2-19-24/UTILITIES/venix2xhomer.c xhomer-2-19-24-utilfix/UTILITIES/venix2xhomer.c
+--- xhomer-2-19-24/UTILITIES/venix2xhomer.c	2006-08-18 04:51:33.000000000 +0400
++++ xhomer-2-19-24-utilfix/UTILITIES/venix2xhomer.c	2024-12-19 05:08:36.426615578 +0300
+@@ -26,6 +26,7 @@
+ 
+ #include <string.h>
+ #include <stdio.h>
++#include <stdlib.h>
+ 
+ #define SECSIZE		512
+ #define SECTORS		10
