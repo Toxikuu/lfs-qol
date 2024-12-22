@@ -1,0 +1,85 @@
+diff -Naur idle-lisa-emu-code-r26/cpu/debug.c idle-lisa-emu-code-r26-patched/cpu/debug.c
+--- idle-lisa-emu-code-r26/cpu/debug.c	2018-01-30 01:08:30.000000000 +0300
++++ idle-lisa-emu-code-r26-patched/cpu/debug.c	2024-12-15 21:38:05.553397485 +0300
+@@ -1132,6 +1132,7 @@
+         sprintf(buf, "LINE F   %04x", inst_stream[0]);
+         return 1;
+     }
++	return 0;
+ }
+ 
+ 
+diff -Naur idle-lisa-emu-code-r26/debug/trace.c idle-lisa-emu-code-r26-patched/debug/trace.c
+--- idle-lisa-emu-code-r26/debug/trace.c	2021-05-18 16:02:28.000000000 +0300
++++ idle-lisa-emu-code-r26-patched/debug/trace.c	2024-12-15 21:36:54.026395480 +0300
+@@ -68,11 +68,13 @@
+ 	if (logStream!=NULL) {
+ 		log=logStream;
+ 	}
++	return 0;
+ }
+ 
+ int
+ deinit_trace(void) {
+ 	if (trace_init_flag) free(trace_log_tab);
++	return 0;
+ }
+ 
+ // utility func 
+@@ -91,6 +93,7 @@
+ 
+ int
+ do_notrace(char *fmt,...) {
++	return 0;
+ }
+ 
+ // helper function to format messages
+diff -Naur idle-lisa-emu-code-r26/main_sdl.cpp idle-lisa-emu-code-r26-patched/main_sdl.cpp
+--- idle-lisa-emu-code-r26/main_sdl.cpp	2022-10-01 19:39:06.000000000 +0300
++++ idle-lisa-emu-code-r26-patched/main_sdl.cpp	2024-12-15 21:38:50.703398751 +0300
+@@ -648,6 +648,7 @@
+               }
+         lisa_screen_cur=lisa_screen_next;
+         lisa_screen_next=(lisa_screen_cur+1)&1;
++	return 0;
+ }
+ 
+ static int full=0;
+@@ -865,6 +866,7 @@
+       dump_regs();
+       unscare_mouse();
+       ask_bkpt=0;    
++	return 0;
+       // disass_debugger();
+       // regs_debugger();
+       // refresh_mmu_box();
+diff -Naur idle-lisa-emu-code-r26/mmu/mmu.c idle-lisa-emu-code-r26-patched/mmu/mmu.c
+--- idle-lisa-emu-code-r26/mmu/mmu.c	2021-05-18 16:02:28.000000000 +0300
++++ idle-lisa-emu-code-r26-patched/mmu/mmu.c	2024-12-15 21:37:44.654396899 +0300
+@@ -938,6 +938,7 @@
+                     mmuSTATUS&=(~8);
+                     m68ki_bus_error(address, MODE_READ);
+              }
++	return 0;
+ }
+ INLINE uint16 LisaGetW(uint32 address)
+ {
+@@ -978,6 +979,7 @@
+                     mmuSTATUS&=(~8);
+                     m68ki_bus_error(address, MODE_READ);
+              }
++	return 0;
+ }
+ 
+ uint16 LisaGetWDebug(uint32 address)
+diff -Naur idle-lisa-emu-code-r26/time/timer.c idle-lisa-emu-code-r26-patched/time/timer.c
+--- idle-lisa-emu-code-r26/time/timer.c	2015-09-19 02:13:18.000000000 +0300
++++ idle-lisa-emu-code-r26-patched/time/timer.c	2024-12-15 21:35:44.889393542 +0300
+@@ -51,6 +51,7 @@
+ 	timer_tab[g_timer_num].start=g_timer_clock;
+ 	timer_tab[g_timer_num].expire=idle_timer_add(g_timer_clock,delta);	
+ 	g_timer_num++;
++	return 0;
+ }
+ 
+ void idle_timer_update_clock(idle_time delta) {
