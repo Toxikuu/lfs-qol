@@ -1,0 +1,22 @@
+diff -Naur gkermit/gkermit.c gkermit-fixed/gkermit.c
+--- gkermit/gkermit.c	2021-11-15 17:56:42.000000000 +0300
++++ gkermit-fixed/gkermit.c	2024-12-21 18:53:48.016896984 +0300
+@@ -87,6 +87,7 @@
+ 
+ #define _GKERMIT_C
+ #include <stdio.h>
++#include <unistd.h>
+ #include "gkermit.h"
+ 
+ /* Forward declarations of functions used within this module... */
+diff -Naur gkermit/gunixio.c gkermit-fixed/gunixio.c
+--- gkermit/gunixio.c	2021-11-15 17:50:09.000000000 +0300
++++ gkermit-fixed/gunixio.c	2024-12-21 18:55:55.486884839 +0300
+@@ -84,6 +84,7 @@
+ #include <setjmp.h>			/* Longjumps */
+ #include <sys/stat.h>			/* File exist, file size */
+ #include <errno.h>			/* Error symbols */
++#include <unistd.h>			/* write, read, alarm, other stuff */ 
+ #include "gkermit.h"			/* gkermit definitions */
+ 
+ /* All versions of HP-UX need Xon/Xoff */
