@@ -34,7 +34,7 @@ mv fc7a6fc602e2fbcd24851670a5242358765feacf.zip musashi-fc7a6f.zip
 ```
 
 Unpack the musashi submodule into the right place:
-```
+```Bash
 unzip ../musashi-fc7a6f.zip -d src/ &&
 rmdir src/musashi &&
 mv src/Musashi-fc7a6fc602e2fbcd24851670a5242358765feacf src/musashi
