@@ -1,0 +1,14 @@
+diff -Naur freebee-b727767d2ac48b86f984bf816dfbad9ece94776f/src/fbconfig.c freebee-b727767d2ac48b86f984bf816dfbad9ece94776f-system-roms/src/fbconfig.c
+--- freebee-b727767d2ac48b86f984bf816dfbad9ece94776f/src/fbconfig.c	2024-04-29 16:42:15.000000000 +0300
++++ freebee-b727767d2ac48b86f984bf816dfbad9ece94776f-system-roms/src/fbconfig.c	2024-12-20 23:32:20.006536933 +0300
+@@ -63,8 +63,8 @@
+ 		{ "floppy", "disk", "floppy.img" },
+ 		{ "hard_disk", "disk1", "hd.img" },
+ 		{ "hard_disk", "disk2", "hd2.img" },
+-		{ "roms", "rom_14c", "roms/14c.bin" },
+-		{ "roms", "rom_15c", "roms/15c.bin" },
++		{ "roms", "rom_14c", "/usr/share/freebee/roms/14c.bin" },
++		{ "roms", "rom_15c", "/usr/share/freebee/roms/15c.bin" },
+ 		{ "serial", "symlink", "serial-pty" },
+ 		{ "display", "scale_quality", "linear" },
+ 		{ NULL, NULL, NULL }
