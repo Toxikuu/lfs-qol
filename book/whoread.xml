@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="whoread" xreflabel="Who Would Want to Read this Book">
+  <?dbhtml filename="whoread.html"?>
+
+
+  <title>Who Would Want to Read this Book</title>
+
+  <para>
+    This book is meant for users who want to install various packages not found
+    in any of the LFS books.
+  </para>
+
+</sect1>

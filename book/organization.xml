@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="organization" xreflabel="Organization">
+  <?dbhtml filename="organization.html"?>
+
+
+  <title>Organization</title>
+
+  <para>
+    This book is divided into the following X sections:
+  </para>
+
+  <bridgehead renderas="sect2">Part I - Introduction</bridgehead>
+
+  <para>
+    This part contains essential information which is needed to
+    understand the rest of the book.
+  </para>
+
+  <bridgehead renderas="sect2">Appendices</bridgehead>
+
+  <para>
+    The Appendices present information which doesn't belong in the body of
+    book; they are included as reference material. The glossary of acronyms
+    is a handy feature.
+  </para>
+
+</sect1>

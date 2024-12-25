@@ -11,47 +11,35 @@ Such packages that are included are, but not limited to:
 - Hyprland
 - i3
 - SVR4-style tools
+- And much more!
 
 # Where to read
 
-Each folder in this repo is a category or dedicated to installing a single
-package but require multiple packages before being able to install the package
-at the end.
+TBD...
 
-Navigate to a folder and you should see multiple `.md` (Markdown) files. Github
-should display the included README.md in each folder, displaying info on what
-the category/folder is about. If you have cloned this repo, you will have to
-view the `README.md` manually. Each `.md` file in each folder will be numbered,
-all except the `README.md`. This means you should follow each `.md` file
-numerically as they may build on each previous one. Each `README.md` will go in
-depth about it. When viewing on Github, each file should be styled correctly.
+# Installation
 
-# Standards
+How do I convert these XML files to HTML myself? You need to have some software
+installed that deal with these conversions. Please read the `INSTALL.md` file to
+determine what programs you need to install and where to get instructions to
+install that software.
 
-As stated above, each file is a Markdown file. The exceptions are Git specific
-files and the licenses. If you are viewing these files not on Github, you will
-see how the files themselves are laid out in a text format. Please read
-https://www.markdownguide.org/basic-syntax/ to find out what each symbol is
-supposed to mean and do.
+After that, you can build the html with a simple `make` command.
+The default target builds the html in `$(HOME)/public_html/lfs-qol.`
+It will by default make each package and section its own page then link
+everything together for a smooth experience.
 
-Another standard is that each line is limited to 80 maximum characters long.
+The dark theme is also the default, but you can switch the theme by
+running `make LFS_QOL_THEME=<theme>`. `<theme>` can equal:
+- light
+- dark
 
-The last standard is each markdown file follows the same format as the LFS
-books:
-- Package introduction
-- Package information, including download links
-- Add users if necessary
-- Apply patches if necessary
-- Build package
-- Install package
-- Configuration if necessary
+Makefile targets are: `pdf`, `nochunks`, `validate`, and `lfs-qol-patch-list`.
 
-Please read
-[BLFS' Important Information](https://linuxfromscratch.org/blfs/view/svn/introduction/important.html)
-for more information.
+`pdf`: builds GLFS as a PDF file.
 
-# Licenses
+`nochunks`: builds GLFS in one huge file.
 
-The three licenses are named `MIT0-LICENSE`, `BLFS-LICENSE`, and `CC-LICENSE`
-(MIT0, BLFS' MIT, and Creative Commons Attribution-NonCommercial-ShareAlike 2.0
-respectively)
+`validate`:  does an extensive check for xml errors in the book.
+
+`lfs-qol-patch-list`: generates a list of all GLFS controlled patches in the book.

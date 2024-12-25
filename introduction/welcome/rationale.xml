@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="rationale" xreflabel="Rationale for Packages">
+  <?dbhtml filename="rationale.html"?>
+
+  <title>Rationale for Packages</title>
+
+  <para>
+    Upon reading through some of the sections in this book, you may notice
+    that a lot of the packages linked in some of the sections aren't in
+    this book but rather in BLFS, and that some optional dependencies aren't
+    even listed. Furthermore, some packages may be outdated. Lastly, some
+    packages that have test suites don't have test instructions. These
+    choices are very much deliberate.
+  </para>
+
+  <sect2>
+    <title>Why Are Many Packages Not in the Book?</title>
+
+    <para>
+      Many packages linked on some of the packages' sections aren't in
+      the book but rather in the BLFS book. There are multiple reasons
+      for this, but the most notable one is the packages that aren't in
+      the book aren't important for the main packages in the book, those
+      being <application>Steam</application> and <application>Wine
+      </application>. They are still listed anyway if users want more
+      support out of the specific packages not specific to the main
+      packages, like media playback for example. Another reason for
+      packages not being in the book is that the packages take a lot
+      of work to install and require jumping around. They can also require
+      a lot of choice or take up space or RAM for no real benefit for a
+      lot of users when there are more simple solutions.
+    </para>
+
+  </sect2>
+
+  <sect2>
+    <title>Why Are Some Optional Dependencies Not Listed?</title>
+
+    <para>
+      There are some optional dependencies that aren't listed, and the
+      main reason for this is that they just would take up unnecessary
+      space. If on the offchance you desire even more out of your system,
+      there are plenty more packages in BLFS and BLFS is more geared for
+      everyone, although this book focuses more on gaming.
+    </para>
+
+  </sect2>
+
+  <sect2>
+    <title>Packages That Are Outdated and Why</title>
+
+    <para>
+      <xref linkend="nvidia"/>: Newer versions of <application>NVIDIA
+      </application> have many issues. For example, the newest version demands
+      that users disable framebuffer emulation support in the kernel in order
+      to install and use the driver. The one before that requires a
+      <command>sed</command> command after extraction of the runfile.
+      <xref linkend="nvidia"/> does not have these issues. Do note that none of
+      the GLFS editors use this driver anymore and instead use Nouveau Vulkan
+      and Zink Gallium3D from <xref linkend="mesa"/>. It is pretty competent
+      now and is recommended to use those drivers instead.
+    </para>
+
+  </sect2>
+
+  <sect2>
+    <title>Some Package Test Instructions Aren't Included</title>
+
+    <para>
+      Many packages have Test Suites, which offer as a way to see if
+      a package you just compiled doesn't have any bugs. However, in
+      GLFS, a lot of these packages have test suites that depend on
+      packages that aren't necessary in the book and would make this
+      book larger than it needs to be. Part of the appeal of LFS is
+      that you install only what you need and this book aims to reflect
+      that. A lot of the tests as well aren't involved with critical
+      components of the system but rather graphical binaries. If you
+      wish to do test suites, BLFS has good instructions for them and
+      covers all the required dependencies.
+    </para>
+
+  </sect2>
+
+</sect1>

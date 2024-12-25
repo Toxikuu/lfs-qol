@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE preface PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<preface id="preface" xreflabel="Preface">
+  <?dbhtml filename="preface.html" dir="preface"?>
+
+  <title>Preface</title>
+
+  <para>
+    There are a number of packages that don't quite belong in the LFS books
+    (LFS, MLFS, BLFS, or GLFS). However, some packages can be confusing to
+    install beyond these books, sometimes requiring multiple patches to even
+    build, or the setup is confusing.
+  </para>
+
+  <para>
+    This book is meant to solve this very issue, essentially covering a
+    different number of packages that should have a guide but don't belong in
+    the LFS books.
+  </para>
+
+  <blockquote>
+<literallayout>Zeckma
+zeckma.tech &lt;at&gt; gmail.com</literallayout>
+  </blockquote>
+
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="foreword.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="whoread.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="organization.xml"/>
+  <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="errata.xml"/> -->
+
+</preface>

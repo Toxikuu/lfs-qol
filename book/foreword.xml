@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="foreword" xreflabel="Foreword">
+  <?dbhtml filename="foreword.html"?>
+
+
+  <title>Foreword</title>
+
+  <para>
+    This book is meant to be followed after LFS. It is highly recommended to
+    follow BLFS as well. This book depends on a lot of the packages in that
+    book. You may optionally follow GLFS before this book as well, although
+    all packages in this book should not need any lib32 build instructions.
+    This means MLFS is not a requirement.
+  </para>
+
+  <para>Enjoy!</para>
+
+  <blockquote>
+<literallayout>Zeckma
+August 2nd, 2024</literallayout>
+  </blockquote>
+
+</sect1>
