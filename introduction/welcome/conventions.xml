@@ -54,7 +54,7 @@
     the book, such as HowTos, download locations, websites, etc.</para>
   </blockquote>
 
-  <para><xref linkend="whichsections"/></para>
+  <para><xref linkend="askhelp"/></para>
 
   <blockquote>
     <para>This form of text is used for links internal to
@@ -98,10 +98,11 @@ EOF</userinput></screen>
   <sect2>
   <title>Conventions Used for Package Dependencies</title>
 
-    <para>When new packages are created, the software's authors depend on prior work.  In
-    order to build a package in GLFS, these dependencies must be built before
-    the desired package can be compiled.  For each package, prerequisites are listed
-    in one or more separate sections:  Required, Recommended, and Optional.</para>
+    <para>When new packages are created, the software's authors depend on prior
+    work. In order to build a package in the LFS books, these dependencies must
+    be built before the desired package can be compiled. For each package,
+    prerequisites are listed in one or more separate sections: Required,
+    Recommended, and Optional.</para>
 
     <bridgehead renderas="sect3">Required Dependencies</bridgehead>
 
@@ -114,7 +115,7 @@ EOF</userinput></screen>
 
     <bridgehead renderas="sect3">Recommended Dependencies</bridgehead>
 
-    <para>These are dependencies the GLFS editors have determined
+    <para>These are dependencies the LFS QOL editors have determined
     are important to give the package reasonable capabilities.  If a
     recommended dependency is not said to be <quote>runtime</quote>, package
     installation instructions assume it is installed.  If it
@@ -128,8 +129,8 @@ EOF</userinput></screen>
 
     <para>These are dependencies the package <emphasis>may</emphasis> use.  Integration
     of optional dependencies may be automatic by the package, or
-    additional steps not presented by GLFS may be necessary.  Optional dependencies are
-    sometimes listed without explicit GLFS instructions.  In this case you must
+    additional steps not presented by LFS QOL may be necessary.  Optional dependencies are
+    sometimes listed without explicit LFS QOL instructions.  In this case you must
     determine how to perform the installation yourself.</para>
 
     <para>&nbsp;</para> <!-- add extra white space to improve readability -->

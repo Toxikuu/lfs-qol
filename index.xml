@@ -14,9 +14,7 @@ $Date$
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="book/preface.xml"/>
 
   <!-- Parts -->
-  <!--
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="introduction/introduction.xml"/>
-  -->
 
   <!-- Appendices -->
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="appendices/creat-comm.xml"/>
