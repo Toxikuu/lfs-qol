@@ -6,7 +6,7 @@
 ]>
 
 <sect1 id="contactinfo">
-  <?dbhtml filename="contactinfo.html"?>
+  <?dbhtml filename="introduction/contactinfo.html"?>
 
 
   <title>Contact Information</title>

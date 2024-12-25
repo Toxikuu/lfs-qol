@@ -6,7 +6,7 @@
 ]>
 
 <sect1 id="important" xreflabel="Important Information">
-  <?dbhtml filename="important.html"?>
+  <?dbhtml filename="introduction/important.html"?>
 
   <title>Important Information</title>
 

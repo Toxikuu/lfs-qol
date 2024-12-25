@@ -6,7 +6,7 @@
 ]>
 
 <sect1 id="packages" xreflabel="Getting the Source Packages">
-  <?dbhtml filename="packages.html"?>
+  <?dbhtml filename="introduction/packages.html"?>
 
 
   <title>Getting the Source Packages</title>

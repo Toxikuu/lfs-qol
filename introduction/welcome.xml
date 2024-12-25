@@ -6,7 +6,7 @@
 ]>
 
 <chapter id="welcome">
-  <?dbhtml filename="welcome.html"?>
+  <?dbhtml filename="introduction/welcome.html"?>
 
   <title>Welcome to LFS QOL</title>
 

@@ -6,7 +6,7 @@
 ]>
 
 <sect1 id="credits" xreflabel="Credits">
-  <?dbhtml filename="credits.html"?>
+  <?dbhtml filename="introduction/credits.html"?>
 
 
   <title>Credits</title>

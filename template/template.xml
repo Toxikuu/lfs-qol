@@ -13,7 +13,12 @@
 
 <!-- Try to keep the indentation used in this file-->
 <sect1 id="TEMPLATE" xreflabel="TEMPLATE-&TEMPLATE-version;">
-  <?dbhtml filename="TEMPLATE.html"?>
+<!-- id should be lowercase, xreflabel can be capitalized. -->
+  <?dbhtml filename="CATEGORY/TEMPLATE.html"?>
+  <!-- CATEGORY would be the category or folder TEMPLATE best falls into. 
+       For example, fuse2 would fall in binary, so it would look like
+       binary/fuse2.html. Typically, even if the nice name would be
+       capitalized, the dbhtml filename should not be. -->
 
   <!-- No other tags inside any title.
        Use Title Case in All Titles

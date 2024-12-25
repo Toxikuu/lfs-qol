@@ -6,7 +6,7 @@
 ]>
 
 <chapter id="binary">
-  <?dbhtml filename="binary.html"?>
+  <?dbhtml filename="binary/binary.html"?>
 
   <title>Binary</title>
 
