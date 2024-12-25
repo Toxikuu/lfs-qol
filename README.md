@@ -1,7 +1,7 @@
 # lfs-qol (Linux From Scratch - Quality of Life)
 
-This repository is dedicated to documenting the installation of some packages
-on an LFS system that do not appear in LFS, MLFS, BLFS, and GLFS.
+This book is dedicated to documenting the installation of some packages on an
+LFS system that do not appear in LFS, MLFS, BLFS, and GLFS.
 
 This project also assumes you are using a SysVinit LFS system.
 
@@ -15,7 +15,8 @@ Such packages that are included are, but not limited to:
 
 # Where to read
 
-TBD...
+For now, you will have to render the book yourself. Follow the instructions
+below.
 
 # Installation
 
