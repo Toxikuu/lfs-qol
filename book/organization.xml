@@ -12,7 +12,7 @@
   <title>Organization</title>
 
   <para>
-    This book is divided into the following X sections:
+    This book is divided into the following sections:
   </para>
 
   <bridgehead renderas="sect2">Part I - Introduction</bridgehead>
@@ -20,6 +20,14 @@
   <para>
     This part contains essential information which is needed to
     understand the rest of the book.
+  </para>
+
+  <bridgehead renderas="sect2">Part II - Binary</bridgehead>
+
+  <para>
+    This part covers packages that help with running binaries on an LFS system
+    that have not been compiled on that system. It does not cover 32-bit binary
+    support on 64-bit. If that is what you are looking for, please read MLFS.
   </para>
 
   <bridgehead renderas="sect2">Appendices</bridgehead>
