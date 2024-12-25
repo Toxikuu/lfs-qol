@@ -44,7 +44,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: /home/runner/public_html/glfs
+          path: /home/runner/public_html/lfs-qol
 
   # Deployment job
   deploy:
