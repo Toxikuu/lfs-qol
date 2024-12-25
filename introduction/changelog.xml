@@ -3,7 +3,7 @@
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
    "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
   <!ENTITY changelogs  "https://www.linuxfromscratch.org/blfs">
-  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
 
@@ -42,6 +42,9 @@
     <listitem>
       <para>December 25th, 2024</para>
       <itemizedlist>
+        <listitem>
+          <para>[zeckma] - docbook - binary/*: Added.</para>
+        </listitem>
         <listitem>
           <para>[zeckma] - *: Further fleshed things out.</para>
         </listitem>

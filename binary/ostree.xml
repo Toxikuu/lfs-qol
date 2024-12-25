@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY ostree-download-http "https://github.com/ostreedev/ostree/releases/download/v&ostree-version;/libostree-&ostree-version;.tar.xz">
+]>
+
+<sect1 id="ostree" xreflabel="OSTree-&ostree-version;">
+  <?dbhtml filename="ostree.html"?>
+
+
+  <title>OSTree-&ostree-version;</title>
+
+  <indexterm zone="ostree">
+    <primary sortas="a-ostree">OSTree</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to OSTree</title>
+
+    <para>
+      The OSTree package is for container deployment and the like. It is
+      required by <xref linkend="flatpak"/>.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&ostree-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">OSTree Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <xref linkend="fuse2"/> or
+      <ulink url="&blfs-svn;/postlfs/fuse.html">Fuse3</ulink> and
+      <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/elogind.html">elogind</ulink>,
+      <ulink url="&blfs-svn;/general/gtk-doc.html">GTK-Doc</ulink>,
+      <ulink url="&blfs-svn;/basicnet/libsoup.html">libsoup</ulink>,
+      <ulink url="&blfs-svn;/basicnet/libsoup3.html">libsoup3</ulink> and
+      <ulink url="&blfs-svn;/general/libxslt.html">libxslt</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of OSTree</title>
+
+    <para>
+      Install <application>OSTree</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr --disable-static &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+</sect1>
