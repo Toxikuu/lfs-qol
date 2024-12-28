@@ -6,7 +6,7 @@
 ]>
 
 <sect1 id="sa" xreflabel="Security Advisories">
-  <?dbhtml filename="introduction/sa.html"?>
+  <?dbhtml filename="sa.html"?>
 
   <title>Security Advisories</title>
 

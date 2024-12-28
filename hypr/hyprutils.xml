@@ -8,7 +8,7 @@
 ]>
 
 <sect1 id="hyprutils" xreflabel="hyprutils-&hyprutils-version;">
-  <?dbhtml filename="hypr/hyprutils.html"?>
+  <?dbhtml filename="hyprutils.html"?>
 
 
   <title>hyprutils-&hyprutils-version;</title>

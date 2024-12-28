@@ -8,7 +8,7 @@
 ]>
 
 <sect1 id="hyprwayland-scanner" xreflabel="hyprwayland-scanner-&hyprwayland-scanner-version;">
-  <?dbhtml filename="hypr/hyprwayland-scanner.html"?>
+  <?dbhtml filename="hyprwayland-scanner.html"?>
 
 
   <title>hyprwayland-scanner-&hyprwayland-scanner-version;</title>

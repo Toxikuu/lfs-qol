@@ -6,7 +6,7 @@
 ]>
 
 <chapter id="hypr">
-  <?dbhtml filename="hypr/hypr.html"?>
+  <?dbhtml filename="hypr.html" dir="hypr"?>
 
   <title>Hypr</title>
 

@@ -8,7 +8,7 @@
 ]>
 
 <sect1 id="sdbus-cpp" xreflabel="sdbus-cpp-&sdbus-cpp-version;">
-  <?dbhtml filename="hypr/sdbus-cpp.html"?>
+  <?dbhtml filename="sdbus-cpp.html"?>
 
 
   <title>sdbus-c++-&sdbus-cpp-version;</title>

@@ -8,7 +8,7 @@
 ]>
 
 <sect1 id="flatpak" xreflabel="Flatpak-&flatpak-version;">
-  <?dbhtml filename="binary/flatpak.html"?>
+  <?dbhtml filename="flatpak.html"?>
 
 
   <title>Flatpak-&flatpak-version;</title>

@@ -8,7 +8,7 @@
 ]>
 
 <sect1 id="hyprlang" xreflabel="hyprlang-&hyprlang-version;">
-  <?dbhtml filename="hypr/hyprlang.html"?>
+  <?dbhtml filename="hyprlang.html"?>
 
 
   <title>hyprlang-&hyprlang-version;</title>

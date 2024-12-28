@@ -8,7 +8,7 @@
 ]>
 
 <sect1 id="hyprland" xreflabel="Hyprland-&hyprland-version;">
-  <?dbhtml filename="hypr/hyprland.html"?>
+  <?dbhtml filename="hyprland.html"?>
 
 
   <title>Hyprland-&hyprland-version;</title>

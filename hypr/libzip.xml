@@ -8,7 +8,7 @@
 ]>
 
 <sect1 id="libzip" xreflabel="libzip-&libzip-version;">
-  <?dbhtml filename="hypr/libzip.html"?>
+  <?dbhtml filename="libzip.html"?>
 
 
   <title>libzip-&libzip-version;</title>

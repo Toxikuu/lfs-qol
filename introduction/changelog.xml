@@ -10,7 +10,7 @@
 <!-- vim: set expandtab: -->
 
 <sect1 id="changelog" xreflabel="Change Log">
-  <?dbhtml filename="introduction/changelog.html"?>
+  <?dbhtml filename="changelog.html"?>
 
 
   <title>Change Log</title>
@@ -42,6 +42,9 @@
     <listitem>
       <para>December 27th, 2024</para>
       <itemizedlist>
+        <listitem>
+          <para>[zeckma] - *: Added basic layout and improved XML.</para>
+        </listitem>
         <listitem>
           <para>[zeckma] - docbook - hypr/*: Added.</para>
         </listitem>

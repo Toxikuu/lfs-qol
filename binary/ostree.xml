@@ -8,7 +8,7 @@
 ]>
 
 <sect1 id="ostree" xreflabel="OSTree-&ostree-version;">
-  <?dbhtml filename="binary/ostree.html"?>
+  <?dbhtml filename="ostree.html"?>
 
 
   <title>OSTree-&ostree-version;</title>

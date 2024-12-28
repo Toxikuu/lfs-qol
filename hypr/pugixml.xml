@@ -8,7 +8,7 @@
 ]>
 
 <sect1 id="pugixml" xreflabel="pugixml-&pugixml-version;">
-  <?dbhtml filename="hypr/pugixml.html"?>
+  <?dbhtml filename="pugixml.html"?>
 
 
   <title>pugixml-&pugixml-version;</title>
