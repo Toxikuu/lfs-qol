@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY i3-download-http "https://github.com/i3/i3/archive/refs/tags/&i3-version;.tar.gz">
+]>
+
+<sect1 id="i3-wm" xreflabel="i3-&i3-version;">
+  <?dbhtml filename="i3-wm.html"?>
+	
+  <title>i3-&i3-version;</title>
+
+  <indexterm zone="i3-wm">
+    <primary sortas="a-i3-wm">i3</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to i3</title>
+
+    <para>
+      The <application>i3</application> package contains an easy-to-use tiling
+      window manager.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&i3-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">i3 Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <xref linkend="libev"/>,
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
+      <ulink url="&blfs-svn;/x/pango.html">Pango</ulink>,
+      <ulink url="&blfs-svn;/x/startup-notification.html">startup-notification</ulink>,
+      <ulink url="&blfs-svn;/x/TTF-and-OTF-fonts.html">TTF and OTF Fonts</ulink>
+      (only TTF fonts are necessary),
+      <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Utilities</ulink>,
+      <xref linkend="xcb-util-xrm"/>,
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>, and
+      <xref linkend="yajl"/>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/python-modules.html#asciidoc">asciidoc</ulink> and
+      <ulink url="&blfs-svn;/pst/xmlto.html">xmlto</ulink> (for generating
+      documentation)
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&arch-pkgs;/extra/x86_64/dmenu">dmenu</ulink>
+      (for the default launcher),
+      <ulink url="&arch-pkgs;/extra/x86_64/i3lock">i3lock</ulink>
+      (for the default screen locker),
+      <ulink url="&arch-pkgs;/extra/x86_64/i3status">i3status</ulink>
+      (for the default status bar generator), and
+      <ulink url="&arch-pkgs;/extra/x86_64/xss-lock">xss-lock</ulink>
+      (for the default screen locker)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of i3</title>
+
+    <para>
+      Install <application>i3</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir -v build &amp;&amp;
+cd       build &amp;&amp;
+
+meson setup ..          \
+    --prefix=/usr       \
+    --buildtype=release &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Configuring i3</title>
+
+    <sect3 id="i3-config">
+      <title>Config Files</title>
+      <para>
+        <filename>~/.config/i3/config</filename>
+      </para>
+
+      <indexterm zone="i3-wm i3-config">
+        <primary sortas="e-AA.config">~/.config/i3/config</primary>
+      </indexterm>
+
+    </sect3>
+
+    <sect3><title>Configuration Information</title>
+
+      <para>
+        If you did not already make the configuration file, it can be created
+        when first launching <application>i3</application> when you are asked
+        if you want to generate a default configuration file. Now inspect the
+	file and make any changes if you wish. You may need to if you have not
+        installed any of the optional dependencies.
+      </para>
+
+    </sect3>
+
+  </sect2>
+
+</sect1>

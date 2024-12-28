@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY libev-download-http "http://dist.schmorp.de/libev/libev-&libev-version;.tar.gz">
+]>
+
+<sect1 id="libev" xreflabel="libev-&libev-version;">
+  <?dbhtml filename="libev.html"?>
+	
+  <title>libev-&libev-version;</title>
+
+  <indexterm zone="libev">
+    <primary sortas="a-libev">libev</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to libev</title>
+
+    <para>
+      The <application>libev</application> package is a full-featured,
+      high-performant library containing an event loop loosely modelled after
+      <ulink url="&blfs-svn;/basicnet/libevent.html">libevent</ulink>.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&libev-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of libev</title>
+
+    <para>
+      Install <application>libev</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+</sect1>

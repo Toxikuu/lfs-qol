@@ -12,49 +12,49 @@
   <title>Organization</title>
 
   <para>
-    This book is divided into the following sections:
+    This book is divided into the following chapters:
   </para>
 
-  <bridgehead renderas="sect2">Part I - Introduction</bridgehead>
+  <bridgehead renderas="sect2">Chapter 1 - Introduction</bridgehead>
 
   <para>
-    This part contains essential information which is needed to
+    This chapter contains essential information which is needed to
     understand the rest of the book.
   </para>
 
-  <bridgehead renderas="sect2">Part II - Binary</bridgehead>
+  <bridgehead renderas="sect2">Chapter 2 - Binary</bridgehead>
 
   <para>
-    This part covers packages that help with running binaries on an LFS system
+    This chapter covers packages that help with running binaries on an LFS system
     that have not been compiled on that system. It does not cover 32-bit binary
     support on 64-bit. If that is what you are looking for, please read MLFS.
   </para>
 
-  <bridgehead renderas="sect2">Part III - Hypr</bridgehead>
+  <bridgehead renderas="sect2">Chapter 3 - Hypr</bridgehead>
 
   <para>
-    This part covers packages from the Hypr/Hyprland ecosystem, including
+    This chapter covers packages from the Hypr/Hyprland ecosystem, including
     Hyprland itself.
   </para>
 
-  <bridgehead renderas="sect2">Part IV - i3</bridgehead>
+  <bridgehead renderas="sect2">Chapter 4 - i3</bridgehead>
 
   <para>
-    This part covers how to install the dependencies of i3, and how to install
+    This chapter covers how to install the dependencies of i3, and how to install
     i3 itself.
   </para>
 
-  <bridgehead renderas="sect2">Part V - SVR4-style Tools</bridgehead>
+  <bridgehead renderas="sect2">Chapter 5 - SVR4-style Tools</bridgehead>
 
   <para>
-    This part covers the SVR4-style tools, some coming from the Heirloom
+    This chapter covers the SVR4-style tools, some coming from the Heirloom
     project.
   </para>
 
-  <bridgehead renderas="sect2">Part VI - Emulators</bridgehead>
+  <bridgehead renderas="sect2">Chapter 6 - Emulators</bridgehead>
 
   <para>
-    This part covers packages which allow you to emulate older systems. These
+    This chapter covers packages which allow you to emulate older systems. These
     systems can range from PDP and AT&amp;T Unix systems to video game consoles
     like the Nintendo 64 and DS.
   </para>
