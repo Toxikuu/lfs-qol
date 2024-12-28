@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY heirloom-doctools-download-http "https://downloads.sourceforge.net/heirloom/heirloom-doctools/&heirloom-doctools-version;/heirloom-doctools-&heirloom-doctools-version;.tar.bz2">
+]>
+
+<sect1 id="heirloom-doctools" xreflabel="heirloom-doctools-&heirloom-doctools-version;">
+  <?dbhtml filename="heirloom-doctools.html"?>
+
+
+  <title>heirloom-doctools-&heirloom-doctools-version;</title>
+
+  <indexterm zone="heirloom-doctools">
+    <primary sortas="a-heirloom-doctools">heirloom-doctools</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to heirloom-doctools</title>
+
+    <para>
+      The <application>heirloom-doctools</application> package provides
+      <application>troff</application>, <application>nroff</application>, and
+      other related tools. Those tools are enhanced versions of the tools
+      released as a part of OpenSolaris, which are themselves variants of
+      ditroff, which are themselves descendants of the original UNIX troff.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&heirloom-doctools-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+   
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/svr4-tools/heirloom-doctools/heirloom-doctools-&heirloom-doctools-version;-final-updates.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/svr4-tools/heirloom-doctools/heirloom-doctools-&heirloom-doctools-version;-gcc10.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">heirloom-doctools Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <xref linkend="heirloom-ng"/>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <xref linkend="heirloom-sh"/>
+    </para>
+ 
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of heirloom-doctools</title>
+
+    <para>
+      Apply a patch to bring up the source to the last upstream commit:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../heirloom-doctools-&heirloom-doctools-version;-final-updates.patch</userinput></screen>
+
+    <para>
+      Now, apply a patch to fix a multiple definition issue that breaks the compilation:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../heirloom-doctools-&heirloom-doctools-version;-gcc10.patch</userinput></screen>
+
+    <para>
+      If you have <application>heirloom-sh</application> installed, execute the
+      following commands to tell <application>heirloom-doctools</application>
+      where to find it:
+    </para>
+
+<screen><userinput>sed -i 's-/sbin/sh-/usr/5bin/sh-g' mk.config &amp;&amp;
+sed -i 's-/sbin/sh-/usr/5bin/sh-g' stuff/showfont.sh</userinput></screen>
+
+    <para>
+      Otherwise, execute the following commands:
+    </para>
+
+    <!-- computeroutput here as it may be possible jhalfs if down the road
+    used for this book will run this command block blindly. The above
+    command block should really be followed instead as it should install the
+    recommended dep. -->
+<screen><computeroutput>sed -i 's-/sbin/sh-/bin/sh-g' mk.config &amp;&amp;
+sed -i 's-/sbin/sh-/bin/sh-g' stuff/showfont.sh</computeroutput></screen>
+
+    <para>
+      Install <application>heirloom-doctools</application> by running the following
+      command:
+    </para>
+
+<screen><userinput>make -j1</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <command>make -j1</command>: This command forces <command>make</command>
+      to use only one job so we can build reliably, otherwise you might run
+      into a race condition due to <command>pic</command>.
+    </para>
+
+  </sect2>
+
+</sect1>

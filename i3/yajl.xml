@@ -33,13 +33,6 @@
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">yajl Dependencies</bridgehead>
-
-    <bridgehead renderas="sect4">Required</bridgehead>
-    <para role="required">
-      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
-    </para>
-    
     <bridgehead renderas="sect3">Additional Downloads</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
@@ -61,6 +54,13 @@
         </para>
       </listitem>
     </itemizedlist>
+
+    <bridgehead renderas="sect3">yajl Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
 
   </sect2>
 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY schilytools-download-http "https://codeberg.org/schilytools/schilytools/releases/download/&schilytools-version;/schily-&schilytools-version;.tar.bz2">
+]>
+
+<sect1 id="star" xreflabel="star from schilytools-&schilytools-version;">
+  <?dbhtml filename="star.html"?>
+
+
+  <title>star from schilytools-&schilytools-version;</title>
+
+  <indexterm zone="star">
+    <primary sortas="a-star">star</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to star from schilytools</title>
+
+    <para>
+      Due to various upstream-acknowledged issues in heirloom-ng tar, it is
+      preferred to use a different SVR4-compatible tar implementation. This
+      package is exactly that.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&schilytools-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of star from schilytools</title>
+
+    <para>
+      Compile <application>star</application> by running the following
+      command:
+    </para>
+
+<screen><userinput>make</userinput></screen>
+
+    <para>
+      Now, as the &root; user, install <application>star</application> and the
+      supplementary tools:
+    </para>
+
+<screen role="root"><userinput>install -v -m755 -d /usr/5bin &amp;&amp;
+install -v -m755 star/OBJ/*/star /usr/5bin &amp;&amp;
+install -v -m755 star_sym/OBJ/*/star_sym /usr/5bin &amp;&amp;
+install -v -m755 tartest/OBJ/*/tartest /usr/5bin &amp;&amp;
+install -v -m755 -d /usr/share/man/5man/man1 &amp;&amp;
+install -v -m644 star/star.1 /usr/share/man/5man/man1 &amp;&amp;
+install -v -m644 star_sym/star_sym.1 /usr/share/man/5man/man1 &amp;&amp;
+install -v -m644 tartest/tartest.1 /usr/share/man/5man/man1</userinput></screen>
+
+  </sect2>
+  
+</sect1>

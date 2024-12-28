@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY heirloom-devtools-download-http "https://downloads.sourceforge.net/heirloom/heirloom-devtools/&heirloom-devtools-version;/heirloom-devtools-&heirloom-devtools-version;.tar.bz2">
+]>
+
+<sect1 id="heirloom-devtools" xreflabel="heirloom-devtools-&heirloom-devtools-version;">
+  <?dbhtml filename="heirloom-devtools.html"?>
+
+
+  <title>heirloom-devtools-&heirloom-devtools-version;</title>
+
+  <indexterm zone="heirloom-devtools">
+    <primary sortas="a-heirloom-devtools">heirloom-devtools</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to heirloom-devtools</title>
+
+    <para>
+      The <application>heirloom-devtools</application> package provides
+      <application>yacc</application>, <application>lex</application>,
+      <application>m4</application>, <application>make</application>, and
+      <application>SCCS</application>. Those tools are portable derivatives of
+      the tools released as a part of OpenSolaris, which were derived from the
+      original UNIX versions.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&heirloom-devtools-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+   
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/svr4-tools/heirloom-devtools/heirloom-devtools-&heirloom-devtools-version;-final-updates.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/svr4-tools/heirloom-devtools/heirloom-devtools-&heirloom-devtools-version;-fix-make-build.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">heirloom-devtools Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <xref linkend="heirloom-ng"/> and
+      <ulink url="&blfs-svn;/basicnet/libtirpc.html">libtirpc</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <xref linkend="heirloom-sh"/>
+    </para>
+ 
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of heirloom-devtools</title>
+
+    <para>
+      Apply a patch to bring up the source to the last upstream commit:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../heirloom-devtools-&heirloom-devtools-version;-final-updates.patch</userinput></screen>
+
+    <para>
+      Now, apply a patch to fix the compililation of the make utility:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../heirloom-devtools-&heirloom-devtools-version;-fix-make-build.patch</userinput></screen>
+
+    <para>
+      Execute the following command to tell this package to use
+      <application>libtirpc</application>:
+    </para>
+
+<screen><userinput>sed -i 's=-O=-O -I/usr/include/tirpc=g' mk.config</userinput></screen>
+
+    <para>
+      If you have <application>heirloom-sh</application> installed, execute the
+      following commands to tell <application>heirloom-devtools</application>
+      where to find it:
+    </para>
+
+<screen><userinput>sed -i 's-/sbin/sh-/usr/5bin/sh-g' mk.config &amp;&amp;
+sed -i 's-/bin/sh-/usr/5bin/sh-g' mk.config &amp;&amp;
+sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
+
+    <para>
+      Otherwise, execute the following command:
+    </para>
+
+    <!-- computeroutput here as it may be possible jhalfs if down the road
+    used for this book will run this command block blindly. The above
+    command block should really be followed instead as it should install the
+    recommended dep. -->
+<screen><computeroutput>sed -i 's-/sbin/sh-/bin/sh-g' mk.config</computeroutput></screen>
+
+    <para>
+      Install <application>heirloom-devtools</application> by running the following
+      command:
+    </para>
+
+<screen><userinput>make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+</sect1>

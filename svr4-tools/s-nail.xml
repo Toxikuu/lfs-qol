@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY s-nail-download-http "https://ftp.sdaoden.eu/s-nail-&s-nail-version;.tar.xz">
+]>
+
+<sect1 id="s-nail" xreflabel="s-nail-&s-nail-version;">
+  <?dbhtml filename="s-nail.html"?>
+
+
+  <title>s-nail-&s-nail-version;</title>
+
+  <indexterm zone="s-nail">
+    <primary sortas="a-s-nail">s-nail</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to s-nail</title>
+
+    <para>
+      The <application>s-nail</application> package is a mail user agent
+      derived from <application>Berkeley Mail 8.1</application>.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&s-nail-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+   
+    <bridgehead renderas="sect3">s-nail Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required Runtime</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/server/mail.html">An MTA</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/postlfs/mitkrb.html">MIT Kerberos</ulink> and
+      <ulink url="https://spamassassin.apache.org/">Apache SpamAssassin</ulink>
+    </para>
+ 
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of s-nail</title>
+
+    <para>
+      First, configure this package by executing the following command:
+    </para>
+
+<screen><userinput>VAL_BINDIR=/usr/5bin VAL_LIBEXECDIR=/usr/5lib      \
+VAL_MANDIR=/usr/share/man/5man VAL_SYSCONFDIR=/etc \
+make config</userinput></screen>
+
+    <para>
+      Install <application>s-nail</application> by running the following
+      command:
+    </para>
+
+<screen><userinput>make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+    <para>
+      Optionally, make a few compatibility symlinks as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -v -m755 -d /usr/ucb &amp;&amp;
+ln -svf /usr/5bin/s-nail /usr/5bin/mailx &amp;&amp;
+ln -svf /usr/5bin/s-nail /usr/ucb/Mail &amp;&amp;
+ln -svf /usr/5bin/s-nail /usr/ucb/mail</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <envar>VAL_MTA=/usr/bin/sendmail</envar>: This variable sets the path to
+      an MTA.
+    </para>
+
+    <para>
+      <envar>VAL_MTA_ARGV0=sendmail</envar>: This variable is used for
+      mailwrapper(8) compatibility. Mailwrapper is a wrapper program that can
+      be installed as sendmail which will automatically redirect queries to the
+      installed sendmail-compatible MTA.
+    </para>
+
+  </sect2>
+
+</sect1>

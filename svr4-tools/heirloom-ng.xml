@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY heirloom-ng-download-http "https://github.com/Projeto-Pindorama/heirloom-ng/archive/&heirloom-ng-version;.zip">
+]>
+
+<sect1 id="heirloom-ng" xreflabel="heirloom-ng-&heirloom-ng-minor-version;">
+  <?dbhtml filename="heirloom-ng.html"?>
+
+
+  <title>heirloom-ng-&heirloom-ng-minor-version;</title>
+
+  <indexterm zone="heirloom-ng">
+    <primary sortas="a-heirloom-ng">heirloom-ng</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to heirloom-ng</title>
+
+    <para>
+      The <application>heirloom-ng</application> package is a collection of
+      standard Unix utilities that is intended to provide maximum compatibility
+      with traditional Unix while incorporating additional features necessary
+      today.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&heirloom-ng-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+    
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/svr4-tools/heirloom-ng/heirloom-ng-&heirloom-ng-minor-version;-no-static.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/svr4-tools/heirloom-ng/heirloom-ng-&heirloom-ng-minor-version;-fix-libcommon-build.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/svr4-tools/heirloom-ng/heirloom-ng-&heirloom-ng-minor-version;-fix-chroot-build.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/svr4-tools/heirloom-ng/heirloom-ng-&heirloom-ng-minor-version;-fix-date-build.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/svr4-tools/heirloom-ng/heirloom-ng-&heirloom-ng-minor-version;-fix-shl-build.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/svr4-tools/heirloom-ng/heirloom-ng-&heirloom-ng-minor-version;-dont-link-nonexistent-files.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">heirloom-ng Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/unzip.html">UnZip</ulink>
+      (to unpack the distribution) and
+      <ulink url="&blfs-svn;/postlfs/ed.html">ed</ulink>
+    </para>
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of heirloom-ng</title>
+
+    <para>
+      Apply a patch to avoid usage of static libraries:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../heirloom-ng-&heirloom-ng-minor-version;-no-static.patch</userinput></screen>
+
+    <para>
+      Now, apply patches to fix builds of various components:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../heirloom-ng-&heirloom-ng-minor-version;-fix-libcommon-build.patch &amp;&amp;
+patch -Np1 -i ../heirloom-ng-&heirloom-ng-minor-version;-fix-chroot-build.patch &amp;&amp;
+patch -Np1 -i ../heirloom-ng-&heirloom-ng-minor-version;-fix-date-build.patch &amp;&amp;
+patch -Np1 -i ../heirloom-ng-&heirloom-ng-minor-version;-fix-shl-build.patch</userinput></screen>
+
+    <para>
+      Finally, apply a patch to avoid a failure during installation:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../heirloom-ng-&heirloom-ng-minor-version;-dont-link-nonexistent-files.patch</userinput></screen>
+
+    <para>
+      Install <application>heirloom-ng</application> by running the following
+      command:
+    </para>
+
+<screen><userinput>make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+  
+</sect1>

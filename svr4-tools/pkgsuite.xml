@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY pkgsuite-download-http "https://github.com/mamccollum/pkgsuite/archive/&pkgsuite-version;.zip">
+]>
+
+<sect1 id="pkgsuite" xreflabel="pkgsuite-&pkgsuite-minor-version;">
+  <?dbhtml filename="pkgsuite.html"?>
+
+
+  <title>pkgsuite-&pkgsuite-minor-version;</title>
+
+  <indexterm zone="pkgsuite">
+    <primary sortas="a-pkgsuite">pkgsuite</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to pkgsuite</title>
+
+    <para>
+      The <application>pkgsuite</application> package is a patched-up version
+      of the Heirloom Packaging tools, which is itself a patched-up portable
+      version of the UNIX SVR4 packaging utilities.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&pkgsuite-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+    
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/svr4-tools/pkgsuite/pkgsuite-&pkgsuite-minor-version;-paths.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">pkgsuite Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/unzip.html">UnZip</ulink>
+      (to unpack the distribution),
+      <ulink url="&blfs-svn;/general/which.html">Which</ulink>, and
+      <xref linkend="heirloom-ng"/> (at runtime)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of pkgsuite</title>
+
+    <para>
+      Apply a patch to make the installation paths conform with the others in
+      this category:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../pkgsuite-&pkgsuite-minor-version;-paths.patch</userinput></screen>
+
+    <para>
+      Install <application>pkgsuite</application> by running the following
+      command:
+    </para>
+
+<screen><userinput>cd src &amp;&amp;
+./configure &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+  
+</sect1>
