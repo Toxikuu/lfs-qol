@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY libzip-download-http "https://libzip.org/download/libzip-&libzip-version;.tar.xz">
+]>
+
+<sect1 id="libzip" xreflabel="libzip-&libzip-version;">
+  <?dbhtml filename="hypr/libzip.html"?>
+
+
+  <title>libzip-&libzip-version;</title>
+
+  <indexterm zone="libzip">
+    <primary sortas="a-libzip">libzip</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to libzip</title>
+
+    <para>
+      The libzip package contains a library and utilities for handling zip
+      archives.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&libzip-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">libzip Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink> and
+      <ulink url="&blfs-svn;/postlfs/gnutls.html">GnuTLS</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of libzip</title>
+
+    <para>
+      Install <application>libzip</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -G Ninja .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../xincludes/cmake-skip-install-rpath.xml"/>
+
+  </sect2>
+
+</sect1>

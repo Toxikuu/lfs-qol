@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY tomlplusplus-download-http "https://github.com/marzer/tomlplusplus/archive/refs/tags/v&tomlplusplus-version;.tar.gz">
+]>
+
+<sect1 id="tomlplusplus" xreflabel="tomlplusplus-&tomlplusplus-version;">
+  <?dbhtml filename="hypr/tomlplusplus.html"?>
+
+
+  <title>tomlplusplus-&tomlplusplus-version;</title>
+
+  <indexterm zone="tomlplusplus">
+    <primary sortas="a-tomlplusplus">tomlplusplus</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to tomlplusplus</title>
+
+    <para>
+      The tomlplusplus package is a TOML configuration parser for C++.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&tomlplusplus-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of tomlplusplus</title>
+
+    <para>
+      Install <application>tomlplusplus</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson --prefix=/usr --buildtype=release .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+  
+</sect1>

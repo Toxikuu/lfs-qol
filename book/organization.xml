@@ -30,6 +30,35 @@
     support on 64-bit. If that is what you are looking for, please read MLFS.
   </para>
 
+  <bridgehead renderas="sect2">Part III - Hypr</bridgehead>
+
+  <para>
+    This part covers packages from the Hypr/Hyprland ecosystem, including
+    Hyprland itself.
+  </para>
+
+  <bridgehead renderas="sect2">Part IV - i3</bridgehead>
+
+  <para>
+    This part covers how to install the dependencies of i3, and how to install
+    i3 itself.
+  </para>
+
+  <bridgehead renderas="sect2">Part V - SVR4-style Tools</bridgehead>
+
+  <para>
+    This part covers the SVR4-style tools, some coming from the Heirloom
+    project.
+  </para>
+
+  <bridgehead renderas="sect2">Part VI - Emulators</bridgehead>
+
+  <para>
+    This part covers packages which allow you to emulate older systems. These
+    systems can range from PDP and AT&amp;T Unix systems to video game consoles
+    like the Nintendo 64 and DS.
+  </para>
+
   <bridgehead renderas="sect2">Appendices</bridgehead>
 
   <para>
