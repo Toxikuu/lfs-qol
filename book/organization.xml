@@ -51,12 +51,11 @@
     project.
   </para>
 
-  <bridgehead renderas="sect2">Chapter 6 - Emulators</bridgehead>
+  <bridgehead renderas="sect2">Chapter 6 - Computer Emulators</bridgehead>
 
   <para>
-    This chapter covers packages which allow you to emulate older systems. These
-    systems can range from PDP and AT&amp;T Unix systems to video game consoles
-    like the Nintendo 64 and DS.
+    This chapter covers packages which allow you to emulate older computer
+    hardware.
   </para>
 
   <bridgehead renderas="sect2">Appendices</bridgehead>

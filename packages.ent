@@ -41,6 +41,7 @@
 <!ENTITY xhomer-version                      "2-19-24">
 <!ENTITY freebee-minor-version               "b72776">
 <!ENTITY freebee-version                     "b727767d2ac48b86f984bf816dfbad9ece94776f">
+<!ENTITY musashi-submodule-version           "fc7a6fc602e2fbcd24851670a5242358765feacf">
 <!ENTITY s4-3b1-pc7300-minor-version         "efe55b">
 <!ENTITY s4-3b1-pc7300-version               "efe55b8cc917e3e27bcae9786c5b5dec0469be45">
 <!ENTITY lrzsz-version                       "0.12.20">

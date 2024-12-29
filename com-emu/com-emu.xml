@@ -16,7 +16,6 @@
     interoperability with old operating systems running on said hardware.
   </para>
 
-  <!--
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="idle.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xhomer.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="freebee.xml"/>
@@ -24,6 +23,5 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="lrzsz.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="minicom.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gkermit.xml"/>
-  -->
 
 </chapter>

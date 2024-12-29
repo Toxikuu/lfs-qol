@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY lrzsz-download-http "https://ohse.de/uwe/releases/lrzsz-&lrzsz-version;.tar.gz">
+]>
+
+<sect1 id="lrzsz" xreflabel="lrzsz-&lrzsz-version;">
+  <?dbhtml filename="lrzsz.html"?>
+
+
+  <title>lrzsz-&lrzsz-version;</title>
+
+  <indexterm zone="lrzsz">
+    <primary sortas="a-lrzsz">lrzsz</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to lrzsz</title>
+
+    <para>
+      The <application>lrzsz</application> package is for UNIX communication,
+      providing the XMODEM, YMODEM, and ZMODEM file transfer protocols.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&lrzsz-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+   
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/com-emu/lrzsz/lrzsz-&lrzsz-version;-AR.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/com-emu/lrzsz/lrzsz-&lrzsz-version;-automake-1.12.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/com-emu/lrzsz/lrzsz-&lrzsz-version;-automake-1.13.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/com-emu/lrzsz/lrzsz-&lrzsz-version;-c23.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/com-emu/lrzsz/lrzsz-&lrzsz-version;-c99.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/com-emu/lrzsz/lrzsz-&lrzsz-version;-configure-clang16.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/com-emu/lrzsz/lrzsz-&lrzsz-version;-fix-integer-overflow.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/com-emu/lrzsz/lrzsz-&lrzsz-version;-gettext-0.20.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/com-emu/lrzsz/lrzsz-&lrzsz-version;-gettext-0.22.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="https://github.com/gentoo/gentoo/raw/f7f659b24dba90b0278e54a2f4d966e24c7a94fb/net-dialup/lrzsz/files/lrzsz-autotools.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="https://github.com/gentoo/gentoo/raw/f7f659b24dba90b0278e54a2f4d966e24c7a94fb/net-dialup/lrzsz/files/lrzsz-implicit-decl.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of lrzsz</title>
+
+    <para>
+      Apply several patches to fix various configuration, build, and security
+      issues:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../lrzsz-autotools.patch &amp;&amp;
+patch -Np1 -i ../lrzsz-implicit-decl.patch &amp;&amp;
+patch -Np1 -i ../lrzsz-&lrzsz-version;-automake-1.12.patch &amp;&amp;
+patch -Np1 -i ../lrzsz-&lrzsz-version;-automake-1.13.patch &amp;&amp;
+patch -Np1 -i ../lrzsz-&lrzsz-version;-gettext-0.20.patch &amp;&amp;
+patch -Np1 -i ../lrzsz-&lrzsz-version;-AR.patch &amp;&amp;
+patch -Np1 -i ../lrzsz-&lrzsz-version;-configure-clang16.patch &amp;&amp;
+patch -Np1 -i ../lrzsz-&lrzsz-version;-gettext-0.22.patch &amp;&amp;
+patch -Np1 -i ../lrzsz-&lrzsz-version;-c99.patch &amp;&amp;
+patch -Np1 -i ../lrzsz-&lrzsz-version;-fix-integer-overflow.patch &amp;&amp;
+patch -Np1 -i ../lrzsz-&lrzsz-version;-c23.patch</userinput></screen>
+
+    <para>
+      Add and remove files, then regenerate the autoconf files:
+    </para>
+
+<screen><userinput>touch config.rpath &amp;&amp;
+rm -vf missing &amp;&amp;
+rm -vf acconfig.h &amp;&amp;
+autoreconf -fiv</userinput></screen>
+
+    <para>
+      Install <application>lrzsz</application> by executing the following
+      commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr --disable-nls &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install &amp;&amp;
+
+for x in {r,s}{b,x,z} ; do
+    ln -svf l${x} /usr/bin/${x} &amp;&amp;
+    ln -svf l${x:0:1}z.1 /usr/share/man/man1/${x}.1 &amp;&amp;
+    [ "${x:1:1}" = "z" ] || ln -svf l${x:0:1}z.1 /usr/share/man/man1/l${x}.1
+done</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <command>touch config.rpath</command>: This command creates an empty file
+      that <command>automake</command> wishes to use, but is missing
+      from the distribution.
+    </para>
+
+    <para>
+      <command>rm -vf missing</command>: This command deletes the
+      <filename>missing</filename> file as it is too old to be used.
+      <command>automake</command>, when executing
+      <command>autoreconf</command>, will regenerate this file that will be
+      current.
+    </para>
+
+    <para>
+      <command>rm -vf acconfig.h</command>: <command>autoheader</command> does
+      not like the <filename>acconfig.h</filename> file existing, so this
+      command deletes it.
+    </para>
+
+    <para>
+      <parameter>--disable-nls</parameter>: This parameter disables NLS support
+      as it is broken for this package due to missing files.
+    </para>
+
+    <para>
+      <command>for i in {r,s}{b,x,z} ; do...</command>: This command block
+      creates compatibility symlinks for the original
+      <application>rzsz</application> package, which is required for
+      <xref linkend="minicom"/>.
+    </para>
+
+  </sect2>
+
+</sect1>
