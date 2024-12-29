@@ -43,6 +43,9 @@
       <para>December 28th, 2024</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - bookinfo: Link to actual MIT0 license.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - lrzsz: Fix patch dl links.</para>
         </listitem>
         <listitem>
