@@ -15,8 +15,7 @@ Such packages that are included are, but not limited to:
 
 # Where to read
 
-For now, you will have to render the book yourself. Follow the instructions
-below.
+Go to https://glfs-book.github.io/lfs-qol/ and start going through the book!
 
 # Installation
 
