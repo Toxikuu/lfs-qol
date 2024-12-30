@@ -40,6 +40,19 @@
     -->
 
     <listitem>
+      <para>December 29th, 2024</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - heirloom-ex-vi: Use lchmod xinclude.</para>
+        </listitem>
+        <listitem>
+          <para>[seal331] - *: Various bugfixes. PR
+          <ulink url="&lfs-qol-pull;/10">(#10)</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>December 28th, 2024</para>
       <itemizedlist>
         <listitem>
