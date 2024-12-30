@@ -36,10 +36,10 @@ running `make LFS_QOL_THEME=<theme>`. `<theme>` can equal:
 
 Makefile targets are: `pdf`, `nochunks`, `validate`, and `lfs-qol-patch-list`.
 
-`pdf`: builds GLFS as a PDF file.
+`pdf`: builds LFS-QOL as a PDF file.
 
-`nochunks`: builds GLFS in one huge file.
+`nochunks`: builds LFS-QOL in one huge file.
 
 `validate`:  does an extensive check for xml errors in the book.
 
-`lfs-qol-patch-list`: generates a list of all GLFS controlled patches in the book.
+`lfs-qol-patch-list`: generates a list of all LFS-QOL controlled patches in the book.
