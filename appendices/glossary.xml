@@ -2520,6 +2520,17 @@
       </glossdef>
     </glossentry>
 
+    <glossentry id="gUNIXen">
+      <glossterm>
+        <acronym>UNIXen</acronym>
+      </glossterm>
+      <glossdef>
+        <para>
+          Plural form of Unix
+        </para>
+      </glossdef>
+    </glossentry>
+
     <glossentry id="gURL">
       <glossterm>
         <acronym>URL</acronym>
