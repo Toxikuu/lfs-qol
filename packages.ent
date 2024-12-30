@@ -37,7 +37,8 @@
 <!ENTITY heirloom-ex-vi-version              "bd1f886598d20d457885c5c189fea34b027cbdef">
 
 <!-- 6. EMULATORS -->
-<!ENTITY idle-version                        "r26">
+<!ENTITY idle-minor-version                  "r26">
+<!ENTITY idle-version                        "e70cfd651ec84ec10f69b9d8ea8696978a6b5d11">
 <!ENTITY xhomer-version                      "2-19-24">
 <!ENTITY freebee-minor-version               "b72776">
 <!ENTITY freebee-version                     "b727767d2ac48b86f984bf816dfbad9ece94776f">
