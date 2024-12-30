@@ -21,8 +21,8 @@
     <title>Introduction to FreeBee</title>
 
     <para>
-      The <application>FreeBee</application> package is minimalistic Lisa 1/2
-      emulator.
+      The <application>FreeBee</application> package is an AT&amp;T 3B1/7300 UNIX
+      PC emulator.
     </para>
 
     <bridgehead renderas="sect3">Package Information</bridgehead>
