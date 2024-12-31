@@ -43,6 +43,10 @@
       <para>December 30th, 2024</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Binary: Added Contents. Part of
+          <ulink url="&lfs-qol-issues;/11">#11</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - pugixml: Fix download link.</para>
         </listitem>
         <listitem>
