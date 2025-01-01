@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY strace-download-http "https://github.com/strace/strace/releases/download/v&strace-version;/strace-&strace-version;.tar.xz">
+]>
+
+<sect1 id="strace" xreflabel="strace-&strace-version;">
+  <?dbhtml filename="strace.html"?>
+
+
+  <title>strace-&strace-version;</title>
+
+  <indexterm zone="strace">
+    <primary sortas="a-strace">strace</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to strace</title>
+
+    <para>
+      The strace package provides a diagnostic, debugging and instructional userspace utility.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&strace-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">strace Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/general/libunwind.html">libunwind</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of strace</title>
+
+    <para>
+      Install <application>strace</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+../configure --prefix=/usr \
+    --enable-mpers=m32 &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <parameter>--enable-mpers=m32</parameter>: This parameter builds strace with m32 support. By default, it is built with both the m32 and mx32 personalities.
+    </para>
+
+    <para>
+      <parameter>--with-libunwind</parameter>: This parameter builds strace with libunwind support
+    </para>
+
+    <note><para>
+      Invoke <userinput>../configure --help</userinput> for a full list of options.
+    </para></note>
+
+  </sect2>
+
+</sect1>

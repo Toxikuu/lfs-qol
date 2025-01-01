@@ -49,3 +49,6 @@
 <!ENTITY minicom-version                     "2.9">
 <!ENTITY gkermit-tarball-version             "gku201">
 <!ENTITY gkermit-version                     "2.01">
+
+<!-- 7. DEV-TOOLS -->
+<!ENTITY strace-version                      "6.12">
