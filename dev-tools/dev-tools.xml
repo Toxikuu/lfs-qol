@@ -8,7 +8,7 @@
 <chapter id="dev-tools">
   <?dbhtml filename="dev-tools.html" dir="dev-tools"?>
 
-  <title>Dev Tools</title>
+  <title>Developer Tools</title>
 
   <para>
     This section is dedicated to installing tools useful for developers.

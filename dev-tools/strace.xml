@@ -21,7 +21,7 @@
     <title>Introduction to strace</title>
 
     <para>
-      The strace package provides a diagnostic, debugging and instructional userspace utility.
+      The strace package provides a diagnostic, debugging, and instructional userspace utility.
     </para>
 
     <bridgehead renderas="sect3">Package Information</bridgehead>
@@ -50,10 +50,7 @@
       commands:
     </para>
 
-<screen><userinput>mkdir build &amp;&amp;
-cd    build &amp;&amp;
-
-../configure --prefix=/usr \
+<screen><userinput>./configure --prefix=/usr \
     --enable-mpers=no &amp;&amp;
 make</userinput></screen>
 
@@ -77,8 +74,54 @@ make</userinput></screen>
     </para>
 
     <note><para>
-      Invoke <userinput>../configure --help</userinput> for a full list of options.
+      Invoke <userinput>./configure --help</userinput> for a full list of options.
     </para></note>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+
+      <seglistitem>
+        <seg>
+          strace and strace-log-merge
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="strace-prog">
+        <term><command>strace</command></term>
+        <listitem>
+         <para>
+           is the diagnostic, debugging, and instructional userpace tracer
+         </para>
+          <indexterm zone="strace strace-prog">
+            <primary sortas="b-strace">strace</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="strace-log-merge">
+        <term><command>strace-log-merge</command></term>
+        <listitem>
+         <para>
+           is a utility for handling strace logs
+         </para>
+          <indexterm zone="strace strace-log-merge">
+            <primary sortas="b-strace-log-merge">strace-log-merge</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
 
   </sect2>
 
