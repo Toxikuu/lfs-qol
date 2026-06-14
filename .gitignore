@@ -5,3 +5,5 @@ xxx
 *.swp
 local.mk
 contributor-tools/obj
+
+target
