@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>July 9th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - Limine: 12.3.3 -&gt; 12.4.1. Fixes
+          <ulink url="&slfs-issues;/809">#809</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 28th, 2026</para>
       <itemizedlist>
         <listitem>
