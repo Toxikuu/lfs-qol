@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>July 9th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - scdoc: 1.11.4 -&gt; 1.11.5. Fixes
+          <ulink url="&slfs-issues;/804">#804</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 28th, 2026</para>
       <itemizedlist>
         <listitem>
