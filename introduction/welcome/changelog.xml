@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>July 9th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - m17n-db: 1.8.12 -&gt; 1.8.13. Fixes
+          <ulink url="&slfs-issues;/799">#799</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 28th, 2026</para>
       <itemizedlist>
         <listitem>
