@@ -46,6 +46,42 @@
           <para>[tox] - Mbed-TLS: 3.6.6 -&gt; 3.6.7. Fixes
           <ulink url="&slfs-issues;/800">#800</ulink>.</para>
         </listitem>
+        <listitem>
+          <para>[tox] - libvpl: 2.16.0 -&gt; 2.17.0. Fixes
+          <ulink url="&slfs-issues;/798">#798</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - Limine: 12.3.3 -&gt; 12.4.1. Fixes
+          <ulink url="&slfs-issues;/809">#809</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - OSTree: 2026.1 -&gt; 2026.2. Fixes
+          <ulink url="&slfs-issues;/801">#801</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - QuaZip: 1.7.1 -&gt; 1.7.2. Fixes
+          <ulink url="&slfs-issues;/803">#803</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - tmux: 3.7 -&gt; 3.7b. Fixes
+          <ulink url="&slfs-issues;/807">#807</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - m17n-db: 1.8.12 -&gt; 1.8.13. Fixes
+          <ulink url="&slfs-issues;/799">#799</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - scdoc: 1.11.4 -&gt; 1.11.5. Fixes
+          <ulink url="&slfs-issues;/804">#804</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - inxi: 3.3.40-1 -&gt; 3.3.41-1. Fixes
+          <ulink url="&slfs-issues;/796">#796</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - eza: 0.23.4 -&gt; 0.23.5. Fixes
+          <ulink url="&slfs-issues;/792">#792</ulink>.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
