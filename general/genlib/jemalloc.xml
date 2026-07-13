@@ -60,14 +60,16 @@
       Install jemalloc by running the following commands:
     </para>
 
-<screen><userinput>./configure --prefix=/usr --disable-static &amp;&amp;
+<screen><userinput>autoreconf -fiv &amp;&amp;
+./configure --prefix=/usr --disable-static &amp;&amp;
 make</userinput></screen>
 
     <para>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>make install</userinput></screen>
+<screen role="root"><userinput>make install &amp;&amp;
+mv -vf /usr/share/doc/jemalloc{,-&jemalloc-version;}</userinput></screen>
 
   </sect2>
 
@@ -90,7 +92,7 @@ make</userinput></screen>
         </seg>
         <seg>
           /usr/include/jemalloc and
-          /usr/share/doc/jemalloc
+          /usr/share/doc/jemalloc-&jemalloc-version;
         </seg>
       </seglistitem>
     </segmentedlist>
