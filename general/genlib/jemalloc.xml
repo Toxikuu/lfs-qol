@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY jemalloc-download
+  "https://github.com/jemalloc/jemalloc/releases/download/&jemalloc-version;/jemalloc-&jemalloc-version;.tar.bz2">
+]>
+
+<sect1 id="jemalloc" xreflabel="jemalloc-&jemalloc-version;">
+  <?dbhtml filename="jemalloc.html"?>
+
+  <title>jemalloc-&jemalloc-version;</title>
+
+  <indexterm zone="jemalloc">
+    <primary sortas="a-jemalloc">jemalloc</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to jemalloc</title>
+
+    <para>
+      The jemalloc package provides a general-purpose, scalable, concurrent
+      memory allocator. In addition to drop-in replacements for memory
+      allocation functions defined in the standard C library (e.g., malloc),
+      jemalloc provides several non-standard functions.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&jemalloc-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&dl-root;/jemalloc/jemalloc-&jemalloc-version;-gcc-16-1.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of jemalloc</title>
+
+    <para>
+      Apply a patch to fix building jemalloc with GCC 16:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../jemalloc-&jemalloc-version;-gcc-16-1.patch</userinput></screen>
+
+    <para>
+      Install jemalloc by running the following commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr --disable-static &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          jemalloc-config,
+          jemalloc.sh, and
+          jeprof
+        </seg>
+        <seg>
+          libjemalloc
+        </seg>
+        <seg>
+          /usr/include/jemalloc and
+          /usr/share/doc/jemalloc
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="jemalloc-config">
+        <term><command>jemalloc-config</command></term>
+        <listitem>
+          <para>
+            prints information about the last compile, such as libraries linked
+            against and prefix
+          </para>
+          <indexterm zone="jemalloc jemalloc-config">
+            <primary sortas="b-jemalloc-config">jemalloc-config</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="jemalloc.sh">
+        <term><command>jemalloc.sh</command></term>
+        <listitem>
+          <para>
+            preloads libjemalloc before executing another program
+          </para>
+          <indexterm zone="jemalloc jemalloc.sh">
+            <primary sortas="b-jemalloc.sh">jemalloc.sh</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="jeprof">
+        <term><command>jeprof</command></term>
+        <listitem>
+          <para>
+            utility to parse and analyze jemalloc's heap profile dumps
+          </para>
+          <indexterm zone="jemalloc jeprof">
+            <primary sortas="b-jeprof">jeprof</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libjemalloc">
+        <term><filename class="libraryfile">libjemalloc</filename></term>
+        <listitem>
+          <para>
+            provides memory allocation functions
+          </para>
+          <indexterm zone="jemalloc libjemalloc">
+            <primary sortas="c-libjemalloc">libjemalloc</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
