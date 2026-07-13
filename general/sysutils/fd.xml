@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY fd-download
+  "https://github.com/sharkdp/fd/archive/v&fd-version;/fd-&fd-version;.tar.gz">
+]>
+
+<sect1 id="fd" xreflabel="fd-&fd-version;">
+  <?dbhtml filename="fd.html"?>
+
+  <title>fd-&fd-version;</title>
+
+  <indexterm zone="fd">
+    <primary sortas="a-fd">fd</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to fd</title>
+
+    <para>
+      The fd package provides a simple, fast, user-friendly alternative to
+      <command>find</command>.
+    </para>
+
+    &build-use-network;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&fd-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">fd Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/rust.html">Rustc</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <!-- https://github.com/sharkdp/fd/pull/481 -->
+      <xref linkend="jemalloc"/> (for improved performance)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of fd</title>
+
+    <para>
+      First export some environment variables to enable linking against the
+      system <filename class="libraryfile">libjemalloc</filename>:
+    </para>
+
+<screen><userinput>export CARGO_FEATURE_UNPREFIXED_MALLOC_ON_SUPPORTED_PLATFORMS=1 &amp;&amp;
+export JEMALLOC_OVERRIDE=/usr/lib/libjemalloc.so</userinput></screen>
+
+    <para>
+      Install fd by running the following commands:
+    </para>
+
+<screen><userinput>cargo build --release</userinput></screen>
+
+    <para>
+      To run the test suite, issue: <command>cargo test --release</command>.
+    </para>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -vDm755 target/release/fd -t /usr/bin/</userinput></screen>
+
+    <para>
+      Install the man page as the &root; user, if desired:
+    </para>
+
+<screen remap="doc" role="root"><userinput>install -vDm644 doc/fd.1 -t /usr/share/man/man1/</userinput></screen>
+
+    <para>
+      If you wish to install shell completions, execute the relevant commands
+      for your shell(s) as the &root; user:
+    </para>
+
+<screen role="root"><userinput>target/release/fd --gen-completions bash | install -vDm644 /dev/stdin /usr/share/bash-completions/completions/fd
+target/release/fd --gen-completions fish | install -vDm644 /dev/stdin /usr/share/fish/vendor_completions.d/fd.fish
+target/release/fd --gen-completions zsh  | install -vDm644 /dev/stdin /usr/share/zsh/site-functions/_fd</userinput></screen>
+
+    <para>
+      Finally, unset the previously exported environment variables:
+    </para>
+
+<screen><userinput>unset CARGO_FEATURE_UNPREFIXED_MALLOC_ON_SUPPORTED_PLATFORMS &amp;&amp;
+unset JEMALLOC_OVERRIDE</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <command>cargo build --release --no-default-features --features=completions</command>:
+      This alternative command builds fd without jemalloc.
+    </para>
+
+    <para>
+      <!-- https://github.com/tikv/jemallocator/issues/19 -->
+      <!-- https://github.com/tikv/jemallocator/blob/0e9129157d261cf6bda86d5dcd9eba94f3cd0f96/jemalloc-sys/README.md?plain=1#L179-L182 -->
+      <!-- https://wiki.archlinux.org/index.php?title=Rust_package_guidelines&oldid=878431#Unbundling_C/C++_libraries -->
+      <envar>CARGO_FEATURE_UNPREFIXED_MALLOC_ON_SUPPORTED_PLATFORMS=1</envar>,
+      <envar>JEMALLOC_OVERRIDE=/usr/lib/libjemalloc.so</envar>:
+      These environment variables allow building against the system
+      <filename class="libraryfile">libjemalloc</filename>.
+      If unset, a vendored static library is used.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          fd
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="fd-bin">
+        <term><command>fd</command></term>
+        <listitem>
+          <para>
+            is the <command>find</command> alternative
+          </para>
+          <indexterm zone="fd fd">
+            <primary sortas="b-fd">fd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
