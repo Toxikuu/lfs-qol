@@ -43,6 +43,10 @@
       <para>July 13th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - jaq: Added. Fixes
+          <ulink url="&slfs-issues;/651">#651</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - fd: Added. Fixes
           <ulink url="&slfs-issues;/714">#714</ulink>.</para>
         </listitem>
