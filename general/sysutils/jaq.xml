@@ -95,10 +95,9 @@ ln -sfv jaq                               /usr/bin/jq</userinput></screen>
       If you downloaded the documentation, install it as the &root; user:
     </para>
 
-<screen remap="doc" role="root"><userinput>install -vDm644 jaq.1                  -t /usr/share/man/man1/      &amp;&amp;
-install -vDm644 README.md MANUAL.xhtml -t /usr/share/doc/jaq-&jaq-version;/ &amp;&amp;
-ln -sfv jaq.1                             /usr/share/man/man1/jq.1  &amp;&amp;
-ln -sfv jaq-&jaq-version;                         /usr/share/doc/jq-&jaq-version;</userinput></screen>
+<screen remap="doc" role="root"><userinput>install -vDm644 README.md MANUAL.xhtml -t /usr/share/doc/jaq-&jaq-version;/ &amp;&amp;
+install -vDm644 jaq.1                  -t /usr/share/man/man1/      &amp;&amp;
+ln -sfv jaq.1                             /usr/share/man/man1/jq.1</userinput></screen>
 
   </sect2>
 
@@ -119,8 +118,7 @@ ln -sfv jaq-&jaq-version;                         /usr/share/doc/jq-&jaq-version
           None
         </seg>
         <seg>
-          /usr/share/doc/jaq-&jaq-version; and
-          /usr/share/doc/jq-&jaq-version; (link to jaq-&jaq-version;)
+          /usr/share/doc/jaq-&jaq-version;
         </seg>
       </seglistitem>
     </segmentedlist>
