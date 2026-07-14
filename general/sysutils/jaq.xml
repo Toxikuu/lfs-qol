@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY jaq-upstream   "https://github.com/01mf02/jaq">
+  <!ENTITY jaq-dl-extra   "&jaq-upstream;/releases/download/v&jaq-version;">
+  <!ENTITY jaq-download   "&jaq-upstream;/archive/v&jaq-version;/jaq-&jaq-version;.tar.gz">
+]>
+
+<sect1 id="jaq" xreflabel="jaq-&jaq-version;">
+  <?dbhtml filename="jaq.html"?>
+
+  <title>jaq-&jaq-version;</title>
+
+  <indexterm zone="jaq">
+    <primary sortas="a-jaq">jaq</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to jaq</title>
+
+    <para>
+      jaq is a correct, fast, and simple clone of the JSON processing tool
+      <command>jq</command>. Compared to the original, this implementation is
+      drop-in compatible, is faster in most cases, and supports more data
+      formats.
+    </para>
+
+    &build-use-network;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&jaq-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">jaq Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/rust.html">Rustc</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>
+      (to download documentation)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of jaq</title>
+
+    <para>
+      If you wish to install the documentation, download it
+      <footnote><para>
+        The documentation for this package is written in the
+        <ulink url="https://djot.net/">djot</ulink> markup language.
+        Among the LFS packages, no suitable tooling exists to convert djot into
+        either the troff format used by man pages or XHTML.
+
+        At time of writing, upstream uses
+        <ulink url="https://github.com/hellux/jotdown">jotdown</ulink>
+        for this task. Previously, the much heavier
+        <ulink url="https://pandoc.org/">pandoc</ulink> was used.
+      </para></footnote>
+      using <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>:
+    </para>
+
+<screen remap="doc"><userinput>curl -fsSL -OO &jaq-dl-extra;/{jaq.1,MANUAL.xhtml}</userinput></screen>
+
+    <para>
+      Install jaq by running the following commands:
+    </para>
+
+<screen><userinput>cargo build --release</userinput></screen>
+
+    <para>
+      To test the results, issue: <command>cargo test --release</command>.
+    </para>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -vDm755 target/release/jaq     -t /usr/bin/                 &amp;&amp;
+ln -sfv jaq                               /usr/bin/jq</userinput></screen>
+
+    <para>
+      If you downloaded the documentation, install it as the &root; user:
+    </para>
+
+<screen remap="doc" role="root"><userinput>install -vDm644 README.md MANUAL.xhtml -t /usr/share/doc/jaq-&jaq-version;/ &amp;&amp;
+install -vDm644 jaq.1                  -t /usr/share/man/man1/      &amp;&amp;
+ln -sfv jaq.1                             /usr/share/man/man1/jq.1</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          jaq and
+          jq (link to jaq)
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/share/doc/jaq-&jaq-version;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="jaq-bin">
+        <term><command>jaq</command></term>
+        <listitem>
+          <para>
+            processes JSON (and others) using the jq language
+          </para>
+          <indexterm zone="jaq jaq">
+            <primary sortas="b-jaq">jaq</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="jq">
+        <term><command>jq</command></term>
+        <listitem>
+          <para>
+              compatability symlink to <command>jaq</command>
+          </para>
+          <indexterm zone="jaq jq">
+            <primary sortas="b-jq">jq</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

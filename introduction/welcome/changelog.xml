@@ -40,8 +40,38 @@
     -->
 
     <listitem>
+      <para>July 14th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - libvpl-tools: 1.5.0 -&gt; 1.6.0. Fixes
+          <ulink url="&slfs-issues;/791">#791</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - asio: 1-38-0 -&gt; 1-38-1. Fixes
+          <ulink url="&slfs-issues;/794">#794</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - pycurl: 7.46.0 -&gt; 7.47.0. Fixes
+          <ulink url="&slfs-issues;/802">#802</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - yt-dlp: 2026.06.09 -&gt; 2026.07.04 (security).
+          Fixes <ulink url="&slfs-issues;/805">#805</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Flatpak: 1.16.6 -&gt; 1.18.0. Fixes
+          <ulink url="&slfs-issues;/761">#761</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>July 13th, 2026</para>
       <itemizedlist>
+        <listitem>
+          <para>[tox] - jaq: Added. Fixes
+          <ulink url="&slfs-issues;/651">#651</ulink>.</para>
+        </listitem>
         <listitem>
           <para>[tox] - fd: Added. Fixes
           <ulink url="&slfs-issues;/714">#714</ulink>.</para>
