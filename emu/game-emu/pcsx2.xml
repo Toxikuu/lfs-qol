@@ -34,17 +34,7 @@
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
-    <itemizedlist spacing="compact">
-      <listitem>
-        <para>
-          Recommended game patch collection:
-          <ulink url="https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip"/>
-        </para>
-      </listitem>
-    </itemizedlist>
-
-    <bridgehead renderas="sect3">pcsx2 Dependencies</bridgehead>
+    <bridgehead renderas="sect3">PCSX2 Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
@@ -131,11 +121,12 @@ ln -sfv /usr/share/pcsx2/resources/icons/AppIconLarge.png \
 <screen role="root"><userinput>setcap cap_net_admin,cap_net_raw=eip /usr/bin/pcsx2-qt</userinput></screen>
 
     <para>
-      If you downloaded the recommended game patch collection, install it in
-      the expected location as the &root; user:
+      If you want the recommended game patch collection by PCSX2, download and
+      install it as the &root; user:
     </para>
 
-<screen role="root"><userinput>cp -v ../../patches.zip /usr/share/pcsx2/resources</userinput></screen>
+<screen role="root"><userinput>wcurl https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip \
+  -O /usr/share/pcsx2/resources/patches.zip</userinput></screen>
 
     <para>
       Finally, create a desktop file so PCSX2 can be launched with launchers
