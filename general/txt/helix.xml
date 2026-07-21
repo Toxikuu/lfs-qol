@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY helix-download-root
+    "https://github.com/helix-editor/helix">
+  <!ENTITY helix-download
+    "&helix-download-root;/archive/&helix-version;/helix-&helix-version;.tar.gz">
+]>
+
+<sect1 id="helix" xreflabel="Helix-&helix-version;">
+  <?dbhtml filename="helix.html"?>
+
+  <title>Helix-&helix-version;</title>
+
+  <indexterm zone="helix">
+    <primary sortas="a-helix">Helix</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Helix</title>
+
+    <para>
+      The Helix package provides a modern text editor written in Rust. It is
+      based on Kakoune and Neovim.
+    </para>
+
+    &build-use-network;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&helix-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Helix Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/git.html">Git</ulink> and
+      <ulink url="&blfs-svn;/general/rust.html">Rustc</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&arch-pkgs;/extra/x86_64/wl-clipboard/">wl-clipboard</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/xsel/">xsel</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/xclip/">xclip</ulink>, and
+      several language servers for different languages
+      <footnote><para>
+        See <ulink url="https://docs.helix-editor.com/lang-support.html">
+        Helix's Language Support</ulink> for more details on language servers.
+        Some are already in BLFS and may even be on your system.
+      </para></footnote>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Helix</title>
+
+    <para>
+      Fix a link to one of the repositories that will get cloned:
+    </para>
+
+<screen><userinput
+  remap="pre">sed -i 's/dannylongeuay/ngalaiko/g' languages.toml</userinput></screen>
+
+    <para>
+      Install Helix by running the following commands:
+    </para>
+
+<screen><userinput>HELIX_DEFAULT_RUNTIME=/usr/lib/helix \
+  cargo build --release</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -vDm755  target/release/hx        \
+        -t       /usr/bin/               &amp;&amp;
+install -vdm755  /usr/lib/helix          &amp;&amp;
+cp -vR runtime/* /usr/lib/helix          &amp;&amp;
+rm -rf /usr/lib/helix/grammars/sources   &amp;&amp;
+
+install -vDm644 contrib/Helix.desktop     \
+        -t /usr/share/applications/      &amp;&amp;
+install -vDm644 contrib/Helix.appdata.xml \
+        -t /usr/share/metainfo/          &amp;&amp;
+install -vDm644 contrib/helix.png         \
+        -t /usr/share/icons/hicolor/256x256/apps/</userinput></screen>
+
+    <para>
+      Guides on how to use and configure Helix can be found <ulink
+      url="https://docs.helix-editor.com">here</ulink>.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Program</segtitle>
+      <segtitle>Installed Library</segtitle>
+      <segtitle>Installed Directory</segtitle>
+
+      <seglistitem>
+        <seg>
+          hx
+        </seg>
+        <seg>
+          Several grammer libraries in /usr/lib/helix/grammars
+        </seg>
+        <seg>
+          /usr/lib/helix
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="hx">
+        <term><command>hx</command></term>
+        <listitem>
+          <para>
+            is a modern Rust text editor
+          </para>
+          <indexterm zone="helix hx">
+            <primary sortas="b-hx">hx</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

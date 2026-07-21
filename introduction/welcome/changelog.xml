@@ -43,6 +43,10 @@
       <para>July 20th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Helix: Added. Fixes
+          <ulink url="&slfs-issues;/821">#821</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Waypipe: Added. Fixes
           <ulink url="&slfs-issues;/823">#823</ulink>.</para>
         </listitem>

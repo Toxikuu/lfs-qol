@@ -113,10 +113,10 @@ install -vDm644 completions/zsh/_eza      -t /usr/share/zsh/site-functions/</use
           eza
         </seg>
         <seg>
-          none
+          None
         </seg>
         <seg>
-          none
+          None
         </seg>
       </seglistitem>
     </segmentedlist>
