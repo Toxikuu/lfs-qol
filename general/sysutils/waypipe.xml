@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY waypipe-download-root
+    "https://gitlab.freedesktop.org/mstoeckl/waypipe">
+  <!ENTITY waypipe-download
+    "&waypipe-download-root;/-/archive/v&waypipe-version;/waypipe-v&waypipe-version;.tar.bz2">
+]>
+
+<sect1 id="waypipe" xreflabel="Waypipe-&waypipe-version;">
+  <?dbhtml filename="waypipe.html"?>
+
+  <title>Waypipe-&waypipe-version;</title>
+
+  <indexterm zone="waypipe">
+    <primary sortas="a-waypipe">Waypipe</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Waypipe</title>
+
+    <para>
+      The Waypipe package provides network transparency for Wayland and goes
+      through SSH.
+    </para>
+
+    &build-use-network;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&waypipe-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Waypipe Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/postlfs/openssh.html">OpenSSH</ulink> (runtime)
+      and <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/rust-bindgen.html">rust-bindgen</ulink>,
+      <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>,
+      &gbm;,
+      <ulink url="&blfs-svn;/general/rust.html">Rustc</ulink>,
+      <xref linkend="shaderc"/>, and
+      <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
+      <ulink url="&blfs-svn;/multimedia/libva.html">libva</ulink>,
+      <xref linkend="scdoc"/>, and
+      <ulink url="&arch-pkgs;/extra/x86_64/systemtap/">systemtap</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Waypipe</title>
+
+    <note>
+      <para>
+        This package has two build types. The instructions in this page will be
+        focused on installing the Rust version as it's up-to-date and avoids
+        complications with the installation process. The other version is made
+        in C, a previous edition. The resulting binary is called
+        <command>waypipe-c</command>. If you want that instead of the Rust
+        version, run the following commands:
+      </para>
+<screen><userinput remap="nodump">mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr       \
+            --buildtype=release \
+            -D build_c=true     \
+            -D build_rs=false   \
+            .. &amp;&amp;
+ninja</userinput></screen>
+      <para>
+        Now as the &root; user:
+      </para>
+<screen><userinput remap="nodump">ninja install</userinput></screen>
+      <para>
+        If you want the man page, which may not match exact usage of
+        <command>waypipe-c</command>, run the following as the &root; user:
+      </para>
+<screen><userinput remap="nodump">scdoc &lt; ../waypipe.scd \
+      &gt; /usr/share/man/man1/waypipe.1</userinput></screen>
+    </note>
+
+    <para>
+      Install Waypipe by running the following commands:
+    </para>
+
+<screen><userinput>cargo build --release</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -vDm755 target/release/waypipe -t /usr/bin/</userinput></screen>
+
+    <para>
+      If you installed <xref linkend="scdoc"/>, install the man page as the
+      &root; user:
+    </para>
+
+<screen remap="doc"
+  role="root"><userinput>scdoc &lt; waypipe.scd \
+      &gt; /usr/share/man/man1/waypipe.1</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Program</segtitle>
+      <segtitle>Installed Library</segtitle>
+      <segtitle>Installed Directory</segtitle>
+
+      <seglistitem>
+        <seg>
+          waypipe
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="waypipe-bin">
+        <term><command>waypipe</command></term>
+        <listitem>
+          <para>
+            is a proxy for Wayland to get network transparency in SSH
+          </para>
+          <indexterm zone="waypipe waypipe-bin">
+            <primary sortas="b-waypipe-bin">waypipe</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

@@ -40,6 +40,38 @@
     -->
 
     <listitem>
+      <para>July 28th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[Sicarine] - PrismLauncher: 11.0.2 -&gt; 11.0.3.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>July 23rd, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Shaderc: 2026.2 -&gt; 2026.3.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>July 20th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Helix: Added. Fixes
+          <ulink url="&slfs-issues;/821">#821</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Waypipe: Added. Fixes
+          <ulink url="&slfs-issues;/823">#823</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>July 14th, 2026</para>
       <itemizedlist>
         <listitem>
