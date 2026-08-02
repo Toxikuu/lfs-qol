@@ -43,6 +43,10 @@
       <para>August 1st, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - Limine: 12.4.1 -&gt; 12.5.2. Fixes
+          <ulink url="&slfs-issues;/841">#841</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - ripgrep: 15.1.0 -&gt; 15.2.0. Fixes
           <ulink url="&slfs-issues;/850">#850</ulink>.</para>
         </listitem>
