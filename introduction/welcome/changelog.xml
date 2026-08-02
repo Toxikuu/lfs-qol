@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>August 2nd, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - Glaze: 7.8.4 -&gt; 7.9.1. Fixes
+          <ulink url="&slfs-issues;/833">#833</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 1st, 2026</para>
       <itemizedlist>
         <listitem>
