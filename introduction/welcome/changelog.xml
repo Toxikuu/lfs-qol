@@ -43,6 +43,10 @@
       <para>August 1st, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - fish: 4.8.0 -&gt; 4.8.1. Fixes
+          <ulink url="&slfs-issues;/831">#831</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - ripgrep: 15.1.0 -&gt; 15.2.0. Fixes
           <ulink url="&slfs-issues;/850">#850</ulink>.</para>
         </listitem>
