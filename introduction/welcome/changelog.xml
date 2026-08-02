@@ -43,6 +43,10 @@
       <para>August 1st, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - typst: 0.15.0 -&gt; 0.15.1. Fixes
+          <ulink url="&slfs-issues;/852">#852</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[Sicarine] - intel-onevpl: 26.2.3 -&gt; 26.2.4.</para>
         </listitem>
         <listitem>
