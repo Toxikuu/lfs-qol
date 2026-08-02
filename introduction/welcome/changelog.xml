@@ -47,6 +47,10 @@
           <ulink url="&slfs-issues;/852">#852</ulink>.</para>
         </listitem>
         <listitem>
+          <para>[tox] - ripgrep: 15.1.0 -&gt; 15.2.0. Fixes
+          <ulink url="&slfs-issues;/850">#850</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[Sicarine] - intel-onevpl: 26.2.3 -&gt; 26.2.4.</para>
         </listitem>
         <listitem>
