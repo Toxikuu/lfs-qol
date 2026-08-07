@@ -129,8 +129,8 @@ mv -T udis86-&hypr-udis86-version; subprojects/udis86</userinput></screen>
       Ensure that the installed version of Glaze can be used:
     </para>
 
-<screen><userinput remap="pre">sed -i "s/glaze\ [0-9][0-9.]*...&lt;[0-9][0-9.]*/glaze/" \
-  hyprpm/CMakeLists.txt</userinput></screen>
+<screen><userinput remap="pre">find . -name CMakeLists.txt |
+    xargs sed -i 's/glaze [0-9][0-9.]*\.\.\.&lt;[0-9][0-9.]*/glaze/'</userinput></screen>
 
     <important><para>
       If Glaze is installed and you haven't run the above commands, Hyprland,
