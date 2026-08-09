@@ -23,14 +23,14 @@
     <title>Introduction to dmidecode</title>
 
     <para>
-      dmidecode reports information about a system's hardware as described
-      in the system BIOS according to the SMBIOS/DMI standard. This information
-      typically includes system manufacturer, model name, serial number, BIOS
-      version, asset tag as well as a lot of other details of varying level of
-      interest and reliability depending on the manufacturer. This will often
-      include usage status for the CPU sockets, expansion slots (e.g. AGP, PCI,
-      ISA) and memory module slots, and the list of I/O ports (e.g. serial,
-      parallel, USB).
+      The dmidecode package reports information about a system's hardware as
+      described in the system BIOS according to the SMBIOS/DMI standard. This
+      information typically includes system manufacturer, model name, serial
+      number, BIOS version, asset tag as well as a lot of other details of
+      varying level of interest and reliability depending on the manufacturer.
+      This will often include usage status for the CPU sockets, expansion slots
+      (e.g. AGP, PCI, ISA) and memory module slots, and the list of I/O ports
+      (e.g. serial, parallel, USB).
     </para>
 
     <itemizedlist spacing="compact">
@@ -50,7 +50,7 @@
       Install dmidecode by running the following commands:
     </para>
 
-<screen><userinput>sed -i 's|/doc/dmidecode|&amp;-3.7|' Makefile &amp;&amp;
+<screen><userinput>sed -i 's|/doc/dmidecode|&amp;-&dmidecode-version;|' Makefile &amp;&amp;
 
 make prefix=/usr</userinput></screen>
 
@@ -66,7 +66,7 @@ make prefix=/usr</userinput></screen>
     <title>Command Explanations</title>
 
     <para>
-      <parameter>sed -i 's|/doc/dmidecode|&amp;-3.7|' Makefile</parameter>:
+      <parameter>sed -i 's|/doc/dmidecode|&amp;-&dmidecode-version;|' Makefile</parameter>:
       This command tells the build system to install dmidecode documentation
       into a versioned directory.
     </para>
