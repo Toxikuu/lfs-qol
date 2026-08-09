@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>August 8th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[Sicarine] - dmidecode: Added. Part of
+            <ulink url="&slfs-issues;/317">#317</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 7th, 2026</para>
       <itemizedlist>
         <listitem>

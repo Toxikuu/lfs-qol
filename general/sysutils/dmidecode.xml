@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY dmidecode-download-root
+    "https://download.savannah.gnu.org/releases/dmidecode">
+  <!ENTITY dmidecode-download
+    "&dmidecode-download-root;/dmidecode-&dmidecode-version;.tar.xz">
+]>
+
+<sect1 id="dmidecode" xreflabel="dmidecode-&dmidecode-version;">
+  <?dbhtml filename="dmidecode.html"?>
+
+  <title>dmidecode-&dmidecode-version;</title>
+
+  <indexterm zone="dmidecode">
+    <primary sortas="a-dmidecode">dmidecode</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to dmidecode</title>
+
+    <para>
+      dmidecode reports information about a system's hardware as described
+      in the system BIOS according to the SMBIOS/DMI standard. This information
+      typically includes system manufacturer, model name, serial number, BIOS
+      version, asset tag as well as a lot of other details of varying level of
+      interest and reliability depending on the manufacturer. This will often
+      include usage status for the CPU sockets, expansion slots (e.g. AGP, PCI,
+      ISA) and memory module slots, and the list of I/O ports (e.g. serial,
+      parallel, USB).
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&dmidecode-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of dmidecode</title>
+
+    <para>
+      Install dmidecode by running the following commands:
+    </para>
+
+<screen><userinput>sed -i 's|/doc/dmidecode|&amp;-3.7|' Makefile &amp;&amp;
+
+make prefix=/usr</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make prefix=/usr install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <parameter>sed -i 's|/doc/dmidecode|&amp;-3.7|' Makefile</parameter>:
+      This command tells the build system to install dmidecode documentation
+      into a versioned directory.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          biosdecode, dmidecode, ownership, vpddecode
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/share/doc/dmidecode-&dmidecode-version;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="biosdecode-bin">
+        <term><command>biosdecode</command></term>
+        <listitem>
+          <para>
+            is a tool which prints all BIOS related information it can find
+            in /dev/mem.
+          </para>
+          <indexterm zone="dmidecode biosdecode-bin">
+            <primary sortas="b-biosdecode-bin">biosdecode</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="dmidecode-bin">
+        <term><command>dmidecode</command></term>
+        <listitem>
+          <para>
+            is a DMI table decoder.
+          </para>
+          <indexterm zone="dmidecode dmidecode-bin">
+            <primary sortas="b-dmidecode-bin">dmidecode</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ownership-bin">
+        <term><command>ownership</command></term>
+        <listitem>
+          <para>
+            prints the "ownership tag" that can be set on Compaq computers.
+          </para>
+          <indexterm zone="dmidecode ownership-bin">
+            <primary sortas="b-ownership-bin">ownership</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="vpddecode-bin">
+        <term><command>vpddecode</command></term>
+        <listitem>
+          <para>
+            prints the contents of the "vital product data" structure as
+            found in most IBM and Lenovo computers.
+          </para>
+          <indexterm zone="dmidecode vpddecode-bin">
+            <primary sortas="b-vpddecode-bin">vpddecode</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
