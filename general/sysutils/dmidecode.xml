@@ -23,14 +23,10 @@
     <title>Introduction to dmidecode</title>
 
     <para>
-      The dmidecode package reports information about a system's hardware as
-      described in the system BIOS according to the SMBIOS/DMI standard. This
-      information typically includes system manufacturer, model name, serial
-      number, BIOS version, asset tag as well as a lot of other details of
-      varying level of interest and reliability depending on the manufacturer.
-      This will often include usage status for the CPU sockets, expansion slots
-      (e.g. AGP, PCI, ISA) and memory module slots, and the list of I/O ports
-      (e.g. serial, parallel, USB).
+      The dmidecode package reports information about system hardware as
+      described in the BIOS' programmed SMBIOS/DMI data. The information
+      contains details of varying levels of reliability, depending on the
+      manufacturer.
     </para>
 
     <itemizedlist spacing="compact">
@@ -47,29 +43,23 @@
     <title>Installation of dmidecode</title>
 
     <para>
-      Install dmidecode by running the following commands:
+      Modify the documentation directory so that it is a versioned directory:
     </para>
 
-<screen><userinput>sed -i 's|/doc/dmidecode|&amp;-&dmidecode-version;|' Makefile &amp;&amp;
+<screen><userinput>sed -i 's|/doc/dmidecode|&amp;-&dmidecode-version;|' Makefile
+</userinput></screen>
 
-make prefix=/usr</userinput></screen>
+    <para>
+      Install dmidecode by running the following command:
+    </para>
+
+<screen><userinput>make prefix=/usr</userinput></screen>
 
     <para>
       Now, as the &root; user:
     </para>
 
 <screen role="root"><userinput>make prefix=/usr install</userinput></screen>
-
-  </sect2>
-
-  <sect2 role="commands">
-    <title>Command Explanations</title>
-
-    <para>
-      <parameter>sed -i 's|/doc/dmidecode|&amp;-&dmidecode-version;|' Makefile</parameter>:
-      This command tells the build system to install dmidecode documentation
-      into a versioned directory.
-    </para>
 
   </sect2>
 
@@ -104,7 +94,7 @@ make prefix=/usr</userinput></screen>
         <listitem>
           <para>
             is a tool which prints all BIOS related information it can find
-            in /dev/mem.
+            in /dev/mem
           </para>
           <indexterm zone="dmidecode biosdecode-bin">
             <primary sortas="b-biosdecode-bin">biosdecode</primary>
@@ -116,7 +106,7 @@ make prefix=/usr</userinput></screen>
         <term><command>dmidecode</command></term>
         <listitem>
           <para>
-            is a DMI table decoder.
+            is a DMI table decoder
           </para>
           <indexterm zone="dmidecode dmidecode-bin">
             <primary sortas="b-dmidecode-bin">dmidecode</primary>
@@ -128,7 +118,7 @@ make prefix=/usr</userinput></screen>
         <term><command>ownership</command></term>
         <listitem>
           <para>
-            prints the "ownership tag" that can be set on Compaq computers.
+            prints the "ownership tag" that can be set on Compaq computers
           </para>
           <indexterm zone="dmidecode ownership-bin">
             <primary sortas="b-ownership-bin">ownership</primary>
@@ -141,7 +131,7 @@ make prefix=/usr</userinput></screen>
         <listitem>
           <para>
             prints the contents of the "vital product data" structure as
-            found in most IBM and Lenovo computers.
+            found in most IBM and Lenovo computers
           </para>
           <indexterm zone="dmidecode vpddecode-bin">
             <primary sortas="b-vpddecode-bin">vpddecode</primary>
