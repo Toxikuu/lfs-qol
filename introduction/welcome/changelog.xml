@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>August 12th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - tornado: 6.5.7 -&gt; 6.5.8. Fixes
+          <ulink url="&slfs-issues;/878">#878</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 11th, 2026</para>
       <itemizedlist>
         <listitem>
