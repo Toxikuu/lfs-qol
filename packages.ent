@@ -16,7 +16,7 @@
 <!ENTITY libev-version                       "4.33">
 <!ENTITY libime-version                      "1.1.15">
 <!ENTITY libime-kenlm                        "4cb443e60b7bf2c0ddf3c745378f76cb59e254e5">
-<!ENTITY libjuice-version                    "1.7.2">
+<!ENTITY libjuice-version                    "1.7.3">
 <!ENTITY libsrtp-version                     "2.8.0">
 <!ENTITY libdatachannel-version              "0.24.3">
 <!ENTITY libdatachannel-plog                 "94899e0b926ac1b0f4750bfbd495167b4a6ae9ef">
@@ -94,11 +94,11 @@ version, so keep this at that. -->
 <!ENTITY monero-trezor                       "bff7fdfe436c727982cc553bdfb29a9021b423b0">
 <!ENTITY gkermit-version                     "2.01">
 <!ENTITY gkermit-tarball-version             "gku201">
-<!ENTITY ostree-version                      "2026.2">
+<!ENTITY ostree-version                      "2026.3">
 <!ENTITY ncdu-version                        "1.22">
 <!ENTITY ncompress-version                   "5.0">
 <!ENTITY neofetch-version                    "7.1.0">
-<!ENTITY fastfetch-version                   "2.66.0">
+<!ENTITY fastfetch-version                   "2.67.0">
 <!ENTITY rpmextract-version                  "1.0">
 <!ENTITY rtmpdump-version                    "2.3">
 <!ENTITY rtmpdump-current                    "2.6">
@@ -151,7 +151,7 @@ version, so keep this at that. -->
 <!ENTITY platformdirs-version                "4.10.0">
 <!ENTITY pycurl-version                      "7.47.0">
 <!ENTITY toml-version                        "0.10.2">
-<!ENTITY tornado-version                     "6.5.7">
+<!ENTITY tornado-version                     "6.5.8">
 <!-- Python Modules -->
 <!ENTITY nvchecker-version                   "2.20">
 <!-- END PYTHON -->
