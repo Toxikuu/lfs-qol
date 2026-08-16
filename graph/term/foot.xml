@@ -85,8 +85,8 @@
       First, ensure the documentation directory is versioned:
     </para>
 
-    <screen><userinput>sed -i "s/install_dir: join_paths(get_option('datadir'), 'doc', 'foot'/&amp; + '-' + meson.project_version()/" meson.build</userinput></screen>
-
+<screen><userinput>sed -e "s/install_dir: join_paths(get_option('datadir'), 'doc', 'foot'/&amp; + '-' + meson.project_version()/" \
+    -i meson.build</userinput></screen>
 
     <para>
       Install foot by running the following commands:
