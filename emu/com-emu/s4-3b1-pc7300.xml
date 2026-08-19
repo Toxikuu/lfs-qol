@@ -48,6 +48,19 @@
       </listitem>
     </itemizedlist>
 
+    <tip><para>
+      The patch above is for linux-&s4-kernel;.x. If you have a different
+      kernel version, you'll want to choose the right patch for it.
+      See the <ulink url="&dl-root;/s4-3b1-pc7300/">patch
+      downloads</ulink> for one that supports your kernel. Kernels older than
+      6.18.x are not supported. If you have a new kernel, it may take some time
+      for there to be a patch for it. Upstream is defunct, and the SysV file
+      system driver in the kernel is gone, while every other file system moves
+      on to new and developing APIs. It appears we are one of the few public
+      resources, if not the only public resource, keeping this project up to
+      current APIs and C &amp; GCC standards.
+    </para></tip>
+
   </sect2>
 
   <sect2 role="installation">
