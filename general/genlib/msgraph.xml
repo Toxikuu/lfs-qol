@@ -44,9 +44,15 @@
       <ulink url="&blfs-svn;/gnome/gnome-online-accounts.html">gnome-online-accounts</ulink>
     </para>
 
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/gtk-doc.html">GTK-Doc</ulink>
+    </para>
+
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
-      <ulink url="https://gitlab.freedesktop.org/pwithnall/uhttpmock">uhttpmock (for tests)</ulink>
+      <ulink url="https://gitlab.freedesktop.org/pwithnall/uhttpmock">uhttpmock
+      (for tests)</ulink>
     </para>
 
   </sect2>
@@ -86,6 +92,11 @@ ninja</userinput></screen>
     <title>Command Explanations</title>
 
     &meson-buildtype-release;
+
+    <para>
+      <option>-D gtk-doc=false</option>: Use this option if you haven't
+      installed <ulink url="&blfs-svn;/general/gtk-doc.html">GTK-Doc</ulink>.
+    </para>
 
   </sect2>
 
