@@ -51,11 +51,13 @@
 
     <bridgehead renderas="sect3">libunbound Dependencies</bridgehead>
 
+<!--
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/postlfs/nss.html">NSS</ulink> and
       <ulink url="&blfs-svn;/general/nspr.html">NSPR</ulink>
     </para>
+-->
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
@@ -78,35 +80,28 @@
       Install libunbound by running the following commands:
     </para>
 
-<screen><userinput>CFLAGS+=" -I/usr/include/nss"       \
-CFLAGS+=" -I/usr/include/nspr"      \
-./configure --prefix=/usr           \
-            --sysconfdir=/etc       \
-            --disable-static        \
-            --with-nss              \
-            --with-libunbound-only &amp;&amp;
-make</userinput></screen>
+<screen><userinput>CFLAGS+=" -I/usr/include/nss"  \
+CFLAGS+=" -I/usr/include/nspr" \
+./configure --prefix=/usr      \
+            --sysconfdir=/etc  \
+            --disable-static  &amp;&amp;
+
+make lib &amp;&amp;
+make unbound-anchor</userinput></screen>
 
     <para>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>make install</userinput></screen>
+<screen role="root"><userinput>make install-lib &amp;&amp;
+install -vDm755 .libs/unbound-anchor -t /usr/bin/ &amp;&amp;
+install -vdm755 /etc/unbound &amp;&amp;
+unbound-anchor</userinput></screen>
 
   </sect2>
 
   <sect2 role="commands">
     <title>Command Explanations</title>
-
-    <para>
-      <parameter>--with-nss</parameter>: This ensures libunbound is built with
-      NSS.
-    </para>
-
-    <para>
-      <parameter>--with-libunbound-only</parameter>: This ensures only the
-      library is built.
-    </para>
 
     <para>
       <option>--with-libevent</option>: This option enables libevent support,
@@ -125,7 +120,7 @@ make</userinput></screen>
 
       <seglistitem>
         <seg>
-          None
+          unbound-anchor
         </seg>
         <seg>
           libunbound
@@ -140,6 +135,18 @@ make</userinput></screen>
       <bridgehead renderas="sect3">Short Descriptions</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="unbound-anchor">
+        <term><command>unbound-anchor</command></term>
+        <listitem>
+          <para>
+            anchors unbound for DNS and certificate validation
+          </para>
+          <indexterm zone="libunbound unbound-anchor">
+            <primary sortas="b-unbound-anchor">unbound-anchor</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
 
       <varlistentry id="lib-libunbound">
         <term><filename class="libraryfile">libunbound</filename></term>
