@@ -149,6 +149,12 @@ install -vDm644 fluid-soundfont-&fs-sf2;/*.sf2 -t /usr/share/soundfonts/</userin
 
 <screen role="root" remap="nodump"><userinput>ln -svf <replaceable>&lt;SOUNDFONT&gt;</replaceable> /usr/share/soundfonts/default.sf2</userinput></screen>
 
+    <tip><para>
+      Using a GM (General MIDI) soundfont is recommended. GS (Roland General
+      Standard) is an extension of GM but doesn't replace it. Trying to use a
+      GS soundfont will often result in missing banks, so use GM instead.
+    </para></tip>
+
     <important><para>
       If you are distributing this package as part of a distribution, be sure to
       read the licenses of the soundfonts you install to ensure that they can
