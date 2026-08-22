@@ -39,11 +39,6 @@
         (builds <command>glycin-thumbnailer</command> first which depends on a
         built <filename class="libraryfile">libglycin-2</filename>, which
         should be built beforehand but isn't)</para></listitem>
-      <listitem><para><xref linkend="scenefx"/>
-        (examples are disabled so this issue cannot
-        be observed, but if enabled, then it cannot include
-        <literal>"xdg-shell-protocol.h"</literal>; will be fixed for
-        wlroots-0.20.x)</para></listitem>
     </itemizedlist></note>
 
     <itemizedlist spacing="compact">
