@@ -37,6 +37,16 @@
       </listitem>
     </itemizedlist>
 
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&dl-root;/waypipe/waypipe-v&waypipe-version;-ffmpeg-9.0-1.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
     <bridgehead renderas="sect3">Waypipe Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required</bridgehead>
@@ -97,6 +107,12 @@ ninja</userinput></screen>
 <screen><userinput remap="nodump">scdoc &lt; ../waypipe.scd \
       &gt; /usr/share/man/man1/waypipe.1</userinput></screen>
     </note>
+
+    <para>
+      Amend the code to use the new libavutil API in FFmpeg-9.0:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../waypipe-v&waypipe-version;-ffmpeg-9.0-1.patch</userinput></screen>
 
     <para>
       Install Waypipe by running the following commands:
