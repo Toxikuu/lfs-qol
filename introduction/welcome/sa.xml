@@ -35,6 +35,12 @@
 
     <para>
       To check for packages that have had a CVE fixed, go to the
+      <ulink url="&advisories;">SLFS advisories</ulink> page. It both covers
+      broken changes and security information for each release. 
+    </para>
+
+    <para>
+      You can also got to the
       <ulink url="&slfs-issues;?q=is%3Aclosed+is%3Aissue+label%3Asecurity">
       SLFS issue page</ulink> that has a filter enabled
       (<computeroutput>is:closed is:issue label:security</computeroutput>).
@@ -48,7 +54,8 @@
     </para>
 
     <para>
-      Take note that the packages listed there are issues that have already
+      Take note that in the latter method,
+      the packages listed there are issues that have already
       been closed and are now in the book. You can go to the open section
       of the page to see if there are packages there that are still having
       details worked out and have yet to be fixed in the book. For most people,
