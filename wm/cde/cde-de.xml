@@ -73,6 +73,12 @@
   <sect2 role="installation">
     <title>Installation of CDE</title>
 
+    <tip><para>
+      Build this package as a normal user, otherwise a lock process that needs
+      to interact with Xorg won't be able to unless you set up the Xserver for
+      that.
+    </para></tip>
+
 <!-- Not needed now, but commenting for a future patch.
     <para>
       First, apply a patch with multiple upstream fixes and patches:

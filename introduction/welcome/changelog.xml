@@ -40,6 +40,39 @@
     -->
 
     <listitem>
+      <para>August 22nd, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - PCSX2: 2.6.3 -&gt; f2a8a6.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - RapidYAML: Added for PCSX2.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - GLideN64: 41c7ba -&gt; 24ef0d (downgrade).</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>August 21st, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - MIPSel-GCC: 16.1.0 -&gt; 16.2.0.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - MIPSel-Binutils: 2.46 -&gt; 2.47.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Waypipe: 0.11.0 -&gt; 0.11.1.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - yt-dlp: 2026.07.04 -&gt; 2026.08.19.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 18th, 2026</para>
       <itemizedlist>
         <listitem>
