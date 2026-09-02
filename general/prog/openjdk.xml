@@ -73,8 +73,7 @@
     <bridgehead renderas="sect4">Required Dependencies</bridgehead>
     <para role="required">
       An existing binary (<xref linkend="java"/> or an earlier built
-      version of this package. The instructions below assume that
-      you are using <xref linkend="ojdk-conf"/>),
+      version of this package),
       <ulink url="&blfs-svn;/multimedia/alsa-lib.html">alsa-lib</ulink>,
       <ulink url="&blfs-svn;/general/cpio.html">cpio</ulink>,
       <ulink url="&blfs-svn;/pst/cups.html">Cups</ulink>,
@@ -115,16 +114,6 @@
 -->
     <note>
       <para>
-        Before proceeding, you should ensure that your environment
-        <envar>PATH</envar> variable contains the location of the Java
-        compiler used for bootstrapping OpenJDK.
-        This is the only requirement for the environment. Modern Java
-        installations do not need <envar>JAVA_HOME</envar> and
-        <envar>CLASSPATH</envar> is not used here. Furthermore, OpenJDK
-        developers recommend unsetting <envar>JAVA_HOME</envar>.
-      </para>
-
-      <para>
         The build system does not allow the <option>-j</option> switch in
         <envar>MAKEFLAGS</envar>. See the command explanation for
         <option>--with-jobs=</option>
@@ -136,7 +125,8 @@
       Configure and build the package with the following commands:
     </para>
 
-<screen><userinput>export MAKEFLAGS_HOLD=$MAKEFLAGS           &amp;&amp;
+<screen><userinput>export PATH=$PATH:/opt/jdk/bin             &amp;&amp;
+export MAKEFLAGS_HOLD=$MAKEFLAGS           &amp;&amp;
 unset JAVA_HOME                            &amp;&amp;
 unset CLASSPATH                            &amp;&amp;
 unset MAKEFLAGS                            &amp;&amp;
@@ -334,47 +324,9 @@ EOF</userinput></screen>
       <title>Configuration Information</title>
 
       <para>
-        Normally, the JAVA environment has been configured after installing
-        the binary version, and can be used with the just built package as well.
-        Review <xref linkend="ojdk-conf"/> in case you want to modify
-        something.
+        Follow <xref linkend="ojdk-conf"/> for JDK configuration and
+        recognition.
       </para>
-
-      <para>
-        To test if the man pages are correctly installed, issue
-        <command>source /etc/profile</command> and <command>man java</command>
-        to display the respective man page.
-      </para>
-
-    </sect3>
-
-    <sect3>
-      <title>
-        Setting up the JRE Certificate Authority Certificates (cacerts) file
-      </title>
-
-      <para>
-        If you have run the instructions on the <ulink
-        url="&blfs-svn;/postlfs/make.html">make-ca</ulink> page,
-        you only need to create a symlink in the default location for the
-        <filename>cacerts</filename> file. As the &root; user:
-      </para>
-
-<screen role="root"><userinput>ln -sfv /etc/pki/tls/java/cacerts /opt/jdk/lib/security/cacerts</userinput></screen>
-
-      <para>
-        To check the installation, issue:
-      </para>
-
-<screen role="root"><userinput>/opt/jdk/bin/keytool -list -cacerts</userinput></screen>
-
-    <para>
-      At the prompt <computeroutput>Enter keystore password:</computeroutput>,
-      enter <userinput>changeit</userinput> (the default) or just press the
-      <quote>Enter</quote> key. If the <filename>cacerts</filename> file was
-      installed correctly, you will see a list of the certificates with
-      related information for each one. If not, you need to reinstall them.
-    </para>
 
     </sect3>
 
